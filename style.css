@@ -27,6 +27,7 @@
 }
 .header {
     background:#DB9A5E;
+    height: 100px;
     width: 100%;
     position: fixed;
     display: inline-block;
@@ -34,7 +35,7 @@
 }
 #logo_ngang {
     height: 55px;
-    width: 204px;
+    width: 200px;
 }
 
 .logo img {
@@ -45,10 +46,9 @@
     margin-right: 20px;
 }
 .menu {
-    
-    width: 100%;
+    width: 60%;
     float: left;
-    padding-left: 220px;
+    padding-left: 210px;
     padding-top: 20px;
     display: inline-block;
 }
@@ -71,7 +71,7 @@ float:left;
 /* Định dạng cho thẻ a */
 .menu ul li a
 { 
-width: 125px;
+width: 110px;
 height: 50px;
 text-align: center;
 display:block;
@@ -79,7 +79,7 @@ color:black;
 font-weight:bold;
 text-transform: uppercase;
 text-decoration:none;
-padding: 5px;
+padding: 0px;
 }
 .menu ul li a:hover
 {font-size: 17px;
