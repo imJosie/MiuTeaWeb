@@ -18,11 +18,20 @@
     color: black;
     }
 body {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 100px;
+    background: #FFFFFF;
+}
+.container {
+    min-height: 100%;
     display: flex;
 }
-#header {
+.header {
     background:#DB9A5E;
     width: 100%;
+
+    
 }
 #logo_ngang {
     height: 55px;
@@ -152,6 +161,7 @@ text-align: center;
 }
 #login-btn a:hover {
     color: #60646D;
+    
 }
 /* shopping cart */
 #cart {
@@ -168,15 +178,16 @@ text-align: center;
 }
 
 /* footer part */
-#footer {
+.footer {
     clear: both;
     position: absolute;
     padding: 20px;
     background: #80848c;
     width: 100%;
     height: 180px;
-    border-top-left-radius: 60px;
-    padding-bottom: 0px;
+    bottom: 0;
+    left: 0;
+
 }
 .logo {
     width: 100px;
@@ -203,50 +214,135 @@ text-align: center;
     height: auto;
 }
 
-
-/* tin tức và ưu đãi */
-
-.content a:hover{
-    font-size: 17px;
-    color: #C08753;
+/* content */
+.content{
+    width: 100%;
+    height: 1600px;
 
 }
+.content .title{
+    font-family:Fahwang-Bold ;
+    font-size: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.content .sub_title{
+    font-family:Fahwang-Bold ;
+    font-size: 22px;
+    padding-left: 80px;
+}
+.content .sub_title1{
 
+    padding-left: 80px;
+}
+.text ul
+    {
+    align-items: center;
+    justify-content: center;
+    padding-left: 120px;
+
+    }
+.hangthetv{
+    padding: 30px;
+}
 .box-cha {
-    width: 1100px; 
+    width:100%; 
     height: 400px;
-    margin-top: 30px;
-    margin-left: 80px;
-    
 }
 
 .box-con {
 
     width: 30%; 
     height: 350x;
-    margin: 15px;
     float: left;
+    margin: 10px;
+    padding: 3%;
 }
-.imgttud{
+.box-cha .box-con .title{
+    font-size: 22px;
+    text-align: center;
+    justify-content: center;
+}
+.box-cha .box-con .content{
     height: 180px;
-    width: 330px;
+    align-items: center;
+    justify-content: center;
+}
+.box-cha .box-con .content ul{
+    padding-left: 20px;
+}
+.img_hangthe{
+    height: 130px;
+    text-align: center;
+    
 
 }
-.date{
-    height: 21px;
-    text-align: left;
-    color: #636360;
-    font-size: 15px;
-   
+.button{
+    margin-top: 120px;
+    position:absolute;
+    left: 50%;
+   transform: translate(-50%, -50%);
+    padding: 20px 30px;
+    font-size: 22px;
+    border-radius: 5px;   
+    background: #ffffff;
+    font-family: Fahwang-Bold; 
+    color: #C08753;
+    text-transform: uppercase;
+    text-decoration: none;
+    box-sizing: border-box;
+    border: 2px solid#C08753;
+    transition: 0.5s;
 }
-.headlinettud{
-    height: 50px;
-    text-align: left;
-  
+.button:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background: #C08753;
+    z-index: -1;
+    transform:  scale(0);
+    transition: transform 0.5s;
+    transform-origin: left;
 }
-.decsttud{
-    text-align: justify;
-    font-size: 15px;
-    height: 90px;
-  
+
+.button:hover:before{
+    transform:  scaleX(1);
+    transition: transform 0.5s;
+    transform-origin: right;
 }
+
+
+
+
+.button:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 50%;
+    height: 100%;
+    background: #000;
+    z-index: -1;
+    transform:  scale(0);
+    transition: transform 0.5s;
+    transform-origin: right;
+}
+
+.button:hover:after{
+    transform:  scaleX(1);
+    transition: transform 0.5s;
+    transform-origin: left;
+}
+
+a:hover{
+    color:#fff;
+}
+
+
+
+
+
+
