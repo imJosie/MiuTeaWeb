@@ -169,14 +169,13 @@ text-align: center;
 
 /* footer part */
 #footer {
+    flex-shrink: 0;
     clear: both;
     position: absolute;
     padding: 20px;
     background: #80848c;
     width: 100%;
     height: 180px;
-    border-top-left-radius: 60px;
-    padding-bottom: 0px;
 }
 .logo {
     width: 100px;

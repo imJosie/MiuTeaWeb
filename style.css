@@ -17,40 +17,112 @@
     font-family: Fahwang;
     color: black;
     }
-#body{
-    max-width: 1000px;
-    height: auto;
+body {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 .container {
     min-height: 100%;
-    display: flex;
 }
 .header {
     background:#DB9A5E;
-    height: 100px;
     width: 100%;
-    position: fixed;
     display: inline-block;
+    padding-bottom: 0;
+}
+/* search bar */
+#search-box{
+    background: #fff;
+    border-radius: 30px;
+}
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 12px;
+    width: 150px;
+    padding: 0 5px;
+    transition: 0.5s ease-in-out;
+}
+#search-box:hover #search-text, #search-box #search-text:valid{
+    width: 150px;
+    padding: 0 10px;
+}
+#search-box #search-button {
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 15px;
+}
+/* Login button */
+#login-btn {
+   list-style: none;
+    margin-left: 10px;
+    text-transform: none;
+    padding-top: 10px;
+}
+#login-btn a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 15px;
+}
+#login-btn a:hover {
+    color: #60646D;
     
 }
-#logo_ngang {
-    height: 55px;
-    width: 200px;
+/* shopping cart */
+#cart {
+    width: 30px;
+    height: auto;
+    float: right;
+    list-style-type: none;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.cart a:hover{
+    background-color: none;  
 }
 
+/* logo */
+
+#logo_ngang {
+    height: auto;
+    width: 180px;
+}
 .logo img {
-    flex:1;
+    position: relative;
+}
+
+/* toggle-button */
+.toggle-btn {
     position: absolute;
-    margin-top: 20px;
-    margin-left: 10px;
-    margin-right: 20px;
+    display: none;
+    flex-direction: column;
+    width: 30px;
+    height: 21px;
+    top: 60px;
+    right: 10px;
+}
+
+.toggle-btn .bar {
+    height: 35px;
+    width: 100%;
+    background-color: #000;
+    border-radius: 5px;
+    margin-bottom: 3px;
+}
+
+/* nav-bar */
+.navbar {
+    display: flex;
+    justify-content: center;
 }
 .menu {
-    width: 60%;
-    float: left;
-    padding-left: 210px;
-    padding-top: 20px;
-    display: inline-block;
+    float: right;
+    margin-left: 100px;
 }
  
 .menu ul
@@ -59,9 +131,6 @@
     float:left;
     list-style:none;
     display: flex;
-    align-items: center;
-    justify-content: center;
-
     }
 .menu ul li
 {
@@ -76,13 +145,14 @@ height: 50px;
 text-align: center;
 display:block;
 color:black;
+font-size: 14px;
 font-weight:bold;
 text-transform: uppercase;
 text-decoration:none;
-padding: 0px;
+padding: 5px;
 }
 .menu ul li a:hover
-{font-size: 17px;
+{font-size: 15px;
 background:#935217;
 color: white;
 }
@@ -100,7 +170,7 @@ margin-top: 0;
 
 .menu ul li ul li{
     font-size: 14px;
-    width:125px;
+    width:110px;
     height: 50px;
     color: white;
     background:#935217;
@@ -115,80 +185,25 @@ color: white;
 text-align: center;
 }
 
-
-/* search bar */
-.search {
-    float: left;
-    margin-left: 40px;
-}
-#search-box{
-    background: #fff;
-    border-radius: 30px;
-
-}
-#search-box #search-text{
-    border: none;
-    outline: none;
-    background: none;
-    font-size: 12px;
-    width: 150px;
-    padding: 10px;
-    transition: 0.5s ease-in-out;
-}
-#search-box:hover #search-text, #search-box #search-text:valid{
-    width: 150px;
-    padding: 10px 0px 10px 15px;
-}
-#search-box #search-button {
-    border: none;
-    background-color: #fff;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 50%;
-    font-size: 18px;
-}
-/* Login button */
-#login-btn {
-   float: left;
-   list-style: none;
-    margin-left: 40px;
-    text-transform: none;
-    padding-top: 10px;
-}
-#login-btn a {
-    text-decoration: none;
-    font-weight: bolder;
-}
-#login-btn a:hover {
+.nav_bar_button {
+    width: 25px;
+    height: 25px;
     color: #60646D;
-    
+    margin-left: 10px;
+    display: none;
+    cursor: pointer;
 }
-/* shopping cart */
-#cart {
-    width: 40px;
-    height: auto;
-    float: left;
-    list-style-type: none;
-    margin-left: 40px;
-    margin-right: 20px;
-}
-.cart a:hover{
-    background-color: none;
-   
-}
+
 
 /* footer part */
 footer {
-    bottom: 0px;
-    flex-shrink: 0;
-    clear: both;
-    position: absolute;
-    padding: 20px;
+    margin-bottom: 0;
+     clear: both;
     background: #80848c;
     width: 100%;
     height: 180px;
-
 }
+
 .logo {
     width: 100px;
     height: auto;
@@ -206,105 +221,194 @@ footer {
     flex-basis: 25%;
     padding: 10px;
 }
+.col3 {
+    flex-basis: 25%;
+    padding: 10px;
+}
 .col a {
     text-decoration: none;
 }
-.col .icon {
+.col3 .icon {
     width: 40px;
     height: auto;
 }
 
+/* responsive for header and footer */
+@media (max-width: 400px) {
+   
+}
+@media (max-width:800px) {
+    .toggle-btn{
+        display: flex;
+    }
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .menu {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu ul li ul {
+        display: none;
+    }
+
+    .menu ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+    .active {
+        display: flex;
+    }
+    .hidden {
+        display: none;
+    }
+
+    /* footer */
+    .col3 {
+        display: none;
+     }
+     .row {
+        font-size: smaller;
+     }
+
+}
+
+
 /* running banner */
-
-
 .center {
     margin-bottom: 120px;
     width: 100%;
 }
-.slider{
-    border-radius: 10px;
-}
+
 .slider img {
     width: 100%;
-    height: 300px;
+    height: auto;
     align-self: center;
 }
-/* .banChayNhat {
-    width: 50%;
-} */
 
-.center {
+.banChayNhat{
+    width: 49%;
+    float: left;
+    padding-left: 30px;
+}
 
+.banChayNhat h4 {
+    color: #DB9A5E;
+    margin: 20px 0;
+    font-size: 18px;
 }
 .banChayNhat img {
-    width: 50%;
-    height: 500px;
-    float: left;
-    border: 1px solid #fff;
-    box-shadow: 0 0 5px 1px;
-}
-
-.ThucUongMoi img {
-    width: 50%;
-    height: 500px;
-    float: left;
-    border: 1px solid #fff;
-    box-shadow: 0 0 5px 1px;
-}
-.ThucUongMoi .btn {
-    position: absolute;
-    width: fit-content;
-    top: 50%;
-    left: 90%;
-    transform: translate(-50%, -10%);
-    -ms-transform: translate(-50%, -50%);
-    background:none;
-    border: #000 solid 1px;
-    color: #000;
-    font-size: 16px;
-    padding: 12px 24px;
-    cursor: pointer;
-    border-radius: 5px;
-    text-align: center;
-  }
-
-
-  .ThucUongDacBiet img {
-    width: 100%;
-    height: auto;
-    border: 1px solid #fff;
-    box-shadow: 0 0 5px 1px;
-  }
-
-
-
-
-  /* .menu_mobile {
+    width: 90%;
+    align-content: center;
     position: relative;
-    overflow: hidden;
-} */
+}
+.banChayNhat button {
+    background-color: transparent;
+    border: 2px solid #DB9A5E;
+    width: 150px;
+    height: 38px;
+    border-radius: 10px;
+    font-style: italic;
+    position: absolute;
+    margin-top: 220px;
+    margin-left: -160px;
+}
+.banChayNhat button a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+.ThucUongMoi {
+    padding-top: 60px;
+    width: 49%;
+    float: right;
+    padding-left: 50px;
+}
+.ThucUongMoi h4 {
+    color: #DB9A5E;
+    margin: 20px 0;
+    font-size: 18px;
+}
+.ThucUongMoi img {
+    width: 90%;
+    position: relative;
+}
+.ThucUongMoi button {
+    background-color: transparent;
+    border: 2px solid #DB9A5E;
+    width: 140px;
+    height: 38px;
+    border-radius: 10px;
+    font-style: italic;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -140px;
+  }
+  .ThucUongMoi button a {
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
 
 
-
-
-
-
+.image {
+    width: 60%;
+    padding: 20px;
+    padding-left: 30px;
+  }
+ .image img {
+    width: 90%;
+    margin-top: 20px;
+  }
+  .mota {
+    margin-top: 50px;
+    width: 40%;
+    float: left;
+    
+  }
+.mota button {
+    background-color: #DB9A5E;
+    border: none;
+    width: 100px;
+    height: 38px;
+    border-radius: 10px;
+    font-style: italic;
+}
+.mota button a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
 .mainBot{
     height: auto;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 5px;
 }
 /* Khởi nguồn */
-.colb1 {
+.col {
     margin-top: 10px;
-    width: 35%;
+    width: 33%;
     float: left;
 }
 .khoiNguon img {
-    width: 100%;
-    height: 300px;
+    width: 95%;
+    height: auto;
     border: 1px solid #fff;
-    box-shadow: 0 0 5px 1px;
 }
 
 .khoiNguon span {
@@ -325,26 +429,14 @@ footer {
     font-weight: normal !important;
 }
 /* Cửa hàng */
-.colb2 {
-    margin: 10px 5px 0;
-    width: 33%;
-    float: left;
-   
-}
+
 .cuaHang img {
     width: 100%;
     height: auto;
-    border: 1px solid #fff;
-    box-shadow: 0 0 1px 1px;
+    align-content: center;
 }
 /* Bản tin */
-.colb3 {
-    width: 30%;
-    margin-top: 5px;
-    margin-left: 0;
-    font-family: Fahwang;
-    float: right;
-}
+
 
 .fl {
     float: left;
@@ -381,7 +473,7 @@ footer {
 .news .date {
     font-size: 11px;
     line-height: 21px;
-    padding-left: 180px;
+    padding-left: 130px;
 }
 
 .news:after {
@@ -447,12 +539,11 @@ div {
     align-items: center;
 }
 .formRecive button {
-    width: 50px;
+    width: 100px;
     height: 25px;
-    background: #C08753;
+    background: #e5af7c;
     color: #ffffff;
-    border: none;
-    border-radius: 20%;
+    border: none;;
     text-transform: uppercase;
     -webkit-transition: all 0.3s linear;
     -o-transition: all 0.3s linear;
@@ -465,11 +556,6 @@ button, input, select, textarea {
     line-height: inherit;
     font-style: italic;
 }
-
-button, html input[type=button], input[type=reset], input[type=submit] {
-    -webkit-appearance: button;
-    cursor: pointer;
-}
 button, select {
     text-transform: none;
 }
@@ -481,3 +567,49 @@ button, input, optgroup, select, textarea {
     font: inherit;
     color: inherit;
 }
+/* responsive for content */
+@media (max-width: 400px) {
+   
+}
+@media (max-width:800px) {
+    .banChayNhat {
+        width: 100%;
+        padding-left: 30px;
+        }
+    .banChayNhat button {
+        margin-top: 250px;
+        margin-left: -170px;
+    }
+    .line {
+        display: none;
+    }
+    .ThucUongMoi {
+        width: 100%;
+    }
+    .image {
+        width: 100%;
+        padding: 20px;
+      }
+      .ThucUongDacBiet {
+        flex-direction: column;
+      }
+     .image img {
+        width: 90%;
+        margin-top: 20px;
+      }
+      .mota {
+        margin-top: 50px;
+        width: 100%;
+        padding: 20px;  
+      }
+
+      .mainBot {
+        flex-direction: column;
+      }
+
+    .col {
+        width: 100%;
+    }
+
+}
+
