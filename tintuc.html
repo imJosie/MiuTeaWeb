@@ -12,52 +12,73 @@
 </head>
 <body>
     <div id="vnt-container">
-        <div id="header"> 
-            <div class="logo">
-                <a  href=""><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
-             </div>
-        
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Cửa hàng</a></li>
-                    <li><a href="#">Thực đơn</a></li>
-                    <li><a href="#">Tin tức & Ưu đãi</a>
-                        <ul>
-                        <li><a href="tintuc.html">Tin tức & Sự kiện</a></li>
-                        <li><a href="uudai.html">Khuyến mãi</a></li>
-                         </ul>
-                    </li>
-                    <li>
-                        <a href="#">Liên hệ</a>
+        <div class="header" >
+            <div style="display: flex; justify-content: right;margin-top: 10px;">
+                <div  class="search">
+                    <form action="" id="search-box">
+                        <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
+                        <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div id="login-btn">
+                    <a href="Dangnhap.html"> Đăng nhập</a>
+                </div>
+                <div>
+                    <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
+                </div>
+            </div>
+                <a href="#" class="toggle-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <script>
+                    function showMenu()
+                    {
+                        const menu = document.getElementsByClassName('menu')[0];
+                        menu.classList.toggle('active');
+                    }
+                    const toggleButton = document.getElementsByClassName('toggle-btn')[0];
+                    toggleButton.addEventListener("click", showMenu);
+                    
+                </script>
+            <div class="navbar" >
+                <div class="logo">
+                    <a  href="TrangChu.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+                </div>
+                <nav class="menu hidden" >
+                    <ul>
+                        <li><a href="TrangChu.html">Trang chủ</a></li>
+                        <li><a href="Cuahang.html">Cửa hàng</a></li>
+                        <li><a href="Menu.html">Thực đơn</a></li>
+                        <li><a href="tintucvauudai.html">Tin tức & Ưu đãi</a>
                             <ul>
-                                <li><a href="#">Góp ý</a></li>
-                                <li><a href="#">Hợp tác</a></li>
+                            <li><a href="tintuc.html">Tin tức & Sự kiện</a></li>
+                            <li><a href="uudai.html">Khuyến mãi</a></li>
                             </ul>
-                    </li>
-                            <li>
-                                <a style="width: 150px;" href="#">Về chúng tôi</a>
+                        </li>
+                        <li>
+                            <a href="LienHe.html">Liên hệ</a>
                                 <ul>
-                                <li style="width: 150px;"><a href="#">Khởi nguồn</a></li>
-                                <li style="width: 150px;"><a href="#">Tuyển dụng</a></li>
-                                <li style="width: 150px;"><a href="#">Thành viên</a></li>
+                                    <li><a href="#">Góp ý</a></li>
+                                    <li><a href="#">Hợp tác</a></li>
                                 </ul>
-                            </li>
-                    </ul>
-                    <div  class="search">
-                        <form action="" id="search-box">
-                            <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
-                            <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                    <div id="login-btn">
-                        <a href=""> Đăng nhập</a>
-                    </div>
-                    <div>
-                        <a href=""><img id="cart" src="Image/Logo/cart.png" alt=""></a>
-                    </div>
-            </nav>
-        </div>
+                        </li>
+                                <li>
+                                    <a style="width: 150px;" href="VeChungToi.html">Về chúng tôi</a>
+                                    <ul>
+                                    <li style="width: 150px;"><a href="#">Khởi nguồn</a></li>
+                                    <li style="width: 150px;"><a href="#">Tuyển dụng</a></li>
+                                    <li style="width: 150px;"><a href="#">Thành viên</a></li>
+                                    </ul>
+                                </li>
+                        </ul>
+                </nav>
+            </div>
+            
+            
+            
+        </div >
         <div class="content">
             <center><img src="Image/banner/bannerTinTuc/banner.jpg" alt="banner1" style=" width: 1260px;"> <br>  </center>
             <!-- đây là div tin tức -->
@@ -116,7 +137,8 @@
                 </div>
             </div>
         </div>
-        <div id="footer">
+         <!-- footer -->
+         <footer>
             <div class="row">
                 <div class="col">
                     <a href=""><img class="logo" src="Image/Logo/logo.png" ></a></div>
@@ -130,7 +152,7 @@
                         <a href="#"><p>Góp ý</p> </a>
                         <a href="#"><p>Hợp tác</p> </a>
                 </div>
-                <div class="col">
+                <div class="col3">
                     <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
                     <a href="#"><img class="icon" src="Image/social/igic.png"></a>
                     <a href="#"><img class="icon" src="Image/social/twitteric.png"></a>
@@ -139,7 +161,8 @@
     
                 </div>
             </div>
-        </div>
+            
+        </footer>
    </div>
 </body>
 </html>
