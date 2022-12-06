@@ -22,7 +22,7 @@
                     </p>   
                 </td>
                 <td style="vertical-align: top;">
-                    <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;">Xóa</button>
+                    <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;" onclick="xoa(this)">Xóa</button>
                 </td>
             </tr>
             <tr class="spaceUnder">
@@ -38,7 +38,7 @@
                     </p>   
                 </td>
                 <td style="vertical-align: top;">
-                    <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;">Xóa</button>
+                    <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;" onclick="xoa(this)">Xóa</button>
                 </td>
             </tr>
             <tr class="spaceUnder">
@@ -54,7 +54,7 @@
                     </p>   
                 </td>
                 <td style="vertical-align: top;">
-                    <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;">Xóa</button>
+                    <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;" onclick="xoa(this)" >Xóa</button>
                 </td>
             </tr>
             <tr>
@@ -66,6 +66,26 @@
                 </td>
             </tr>
         </table>
+
+        <script>
+
+            //xóa sp khỏi giỏ hàng
+            var giohang_td = document.createElement("td");
+            var giohang_td_nut = document.createElement("input")
+            giohang_td_nut.type = "button";
+            giohang_td_nut.value ="Xóa";
+            giohang_td_nut.setAttribute("onclick", "xoa(this)");
+            giohang_td.appendChild(giohang_td_nut);
+            giohang_tr.appendChild(giohang_td);
+
+            var giohang = document.getElementById("giohang");
+            giohang.appendChild(giohang_tr);
+
+            function xoa(x) {
+                var tr = x.parentElement.parentElement;
+                tr.remove();
+            }
+        </script>
        
     </body>
 
