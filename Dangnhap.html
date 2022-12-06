@@ -45,7 +45,7 @@
                             </li>
                     </ul>
                     <div  class="search">
-                        <form action="" id="search-box">
+                        <form action="" id="search-box" onsubmit="">
                             <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
                             <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </form>
@@ -67,7 +67,7 @@
                     <div class="title">MiuTea xin chào!</div>
                     <div class="subtitle"> Đăng nhập</div>
                     <form action="#" class="form">
-                        <input type="text" required name="Sodienthoai" placeholder="Họ tên *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 30px;"><br>
+                        <input id="sdt" type="text" required name="Sodienthoai"  placeholder="Số điện thoại *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 30px;"><br>
                      
                         <input type="button" value="ĐĂNG NHẬP" id="btn_login">
             
@@ -80,7 +80,7 @@
                     <div class="title">MiuTea xin chào!</div>
                     <div class="subtitle1">Nhập mã OTP vừa gửi đến</div>
                     <form action="#" class="form">
-                        <input type="text" name="Sodienthoai" placeholder="Nhập mã OTP *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 10px;"><br>
+                        <input id="OTP" type="text" name="MaOTP" placeholder="Nhập mã OTP *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 10px;"><br>
                         <input type="button" value="Xác minh tài khoản" id="btn_verify">
                     </form>
                     <div class="opt_text"> Bạn chưa nhận được mã?</div>
@@ -121,18 +121,43 @@
     <script language="JavaScript">
         var Form1 = document.getElementById("popup1");
         var Form2 = document.getElementById("popup2");
+        var inputPhone = document.getElementById('sdt');
+        var inputOTP = document.getElementById('OTP');
         var Login = document.getElementById("btn_login");
         var Verify = document.getElementById("btn_verify");
-      Login.onclick = function(){
+
+
+    Login.onclick= function() {
         
-        Form1.style.left = "-600px";
-        Form2.style.left = "50%";
-        Form2.style.visibility = "visible";
-      }
+           if( !inputPhone.value)
+            {
+                    alert("Hãy nhập số điện thoại của bạn!");
+                    inputPhone.value ="";
+                    inputPhone.focus();
+                }
+            else  {
+                console.log(inputPhone.value);
+                Form1.style.left = "-600px";
+                Form2.style.left = "50%";
+                Form2.style.visibility = "visible";
+            }
+      } 
+
       Verify.onclick = function(){
-        alert("Đăng nhập thành công!");
-        location.replace("Dangkythanhvien.html");
-      }
+        if( !inputOTP.value)
+        {
+            alert("Hãy nhập mã OTP mà bạn được nhận để thực hiện đăng nhập!");
+            inputOTP.value ="";
+            inputOTP.focus();
+        }
+        else{
+            alert("Đăng nhập thành công!");
+            window.location.href = "Dangkythanhvien.html";
+            console.log(this);
+        }
+        
+           
+        }  
     </script>  
 </body>
 </html>
