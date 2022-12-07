@@ -13,50 +13,71 @@
     <div id="container">
         <!-- Header -->
         <div class="header" >
-            <div class="logo">
-                <a  href=""><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+            <div style="display: flex; justify-content: right;margin-top: 10px;">
+                <div  class="search">
+                    <form action="" id="search-box">
+                        <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
+                        <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </div>
+                <div id="login-btn">
+                    <a href="Dangnhap.html"> Đăng nhập</a>
+                </div>
+                <div>
+                    <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
+                </div>
             </div>
-    
-            <nav class="menu">
-                <ul>
-                    <li><a href="#">Trang chủ</a></li>
-                    <li><a href="#">Cửa hàng</a></li>
-                    <li><a href="#">Thực đơn</a></li>
-                    <li><a href="#">Tin tức & Ưu đãi</a>
-                        <ul>
-                        <li><a href="#">Tin tức & Sự kiện</a></li>
-                        <li><a href="#">Khuyến mãi</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="#">Liên hệ</a>
+                <a href="#" class="toggle-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <script>
+                    function showMenu()
+                    {
+                        const menu = document.getElementsByClassName('menu')[0];
+                        menu.classList.toggle('active');
+                    }
+                    const toggleButton = document.getElementsByClassName('toggle-btn')[0];
+                    toggleButton.addEventListener("click", showMenu);
+                    
+                </script>
+            <div class="navbar" >
+                <div class="logo">
+                    <a  href="TrangChu.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
+                </div>
+                <nav class="menu hidden" >
+                    <ul>
+                        <li><a href="TrangChu.html">Trang chủ</a></li>
+                        <li><a href="Cuahang.html">Cửa hàng</a></li>
+                        <li><a href="Menu.html">Thực đơn</a></li>
+                        <li><a href="tintucvauudai.html">Tin tức & Ưu đãi</a>
                             <ul>
-                                <li><a href="#">Góp ý</a></li>
-                                <li><a href="#">Hợp tác</a></li>
+                            <li><a href="tintuc.html">Tin tức & Sự kiện</a></li>
+                            <li><a href="uudai.html">Khuyến mãi</a></li>
                             </ul>
-                    </li>
-                            <li>
-                                <a style="width: 150px;" href="#">Về chúng tôi</a>
+                        </li>
+                        <li>
+                            <a href="LienHe.html">Liên hệ</a>
                                 <ul>
-                                <li style="width: 150px;"><a href="#">Khởi nguồn</a></li>
-                                <li style="width: 150px;"><a href="#">Tuyển dụng</a></li>
-                                <li style="width: 150px;"><a href="#">Thành viên</a></li>
+                                    <li><a href="#">Góp ý</a></li>
+                                    <li><a href="#">Hợp tác</a></li>
                                 </ul>
-                            </li>
-                    </ul>
-                    <div  class="search">
-                        <form action="" id="search-box">
-                            <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
-                            <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        </form>
-                    </div>
-                    <div id="login-btn">
-                        <a href=""> Đăng nhập</a>
-                    </div>
-                    <div>
-                        <a href=""><img id="cart" src="Image/Logo/cart.png" alt=""></a>
-                    </div>
-            </nav>
+                        </li>
+                                <li>
+                                    <a style="width: 150px;" href="VeChungToi.html">Về chúng tôi</a>
+                                    <ul>
+                                    <li style="width: 150px;"><a href="#">Khởi nguồn</a></li>
+                                    <li style="width: 150px;"><a href="#">Tuyển dụng</a></li>
+                                    <li style="width: 150px;"><a href="#">Thành viên</a></li>
+                                    </ul>
+                                </li>
+                        </ul>
+                </nav>
+            </div>
+            
+            
+            
         </div >
         <!-- Content -->
             <div class="contentpopup">
@@ -67,7 +88,7 @@
                     <div class="title">MiuTea xin chào!</div>
                     <div class="subtitle"> Đăng nhập</div>
                     <form action="#" class="form">
-                        <input type="text" required name="Sodienthoai" placeholder="Họ tên *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 30px;"><br>
+                        <input id="sdt" type="text" required name="Sodienthoai"  placeholder="Số điện thoại *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 30px;"><br>
                      
                         <input type="button" value="ĐĂNG NHẬP" id="btn_login">
             
@@ -80,7 +101,7 @@
                     <div class="title">MiuTea xin chào!</div>
                     <div class="subtitle1">Nhập mã OTP vừa gửi đến</div>
                     <form action="#" class="form">
-                        <input type="text" name="Sodienthoai" placeholder="Nhập mã OTP *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 10px;"><br>
+                        <input id="OTP" type="text" name="MaOTP" placeholder="Nhập mã OTP *" style="height: 35px; width: 250px; padding: 8px; border-radius: 5px; border: 1px solid#000000; margin-top: 10px;"><br>
                         <input type="button" value="Xác minh tài khoản" id="btn_verify">
                     </form>
                     <div class="opt_text"> Bạn chưa nhận được mã?</div>
@@ -92,7 +113,7 @@
        
        
         <!-- footer -->
-        <footer class="footer">
+        <footer>
             <div class="row">
                 <div class="col">
                     <a href=""><img class="logo" src="Image/Logo/logo.png" ></a></div>
@@ -106,7 +127,7 @@
                         <a href="#"><p>Góp ý</p> </a>
                         <a href="#"><p>Hợp tác</p> </a>
                 </div>
-                <div class="col">
+                <div class="col3">
                     <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
                     <a href="#"><img class="icon" src="Image/social/igic.png"></a>
                     <a href="#"><img class="icon" src="Image/social/twitteric.png"></a>
@@ -121,18 +142,43 @@
     <script language="JavaScript">
         var Form1 = document.getElementById("popup1");
         var Form2 = document.getElementById("popup2");
+        var inputPhone = document.getElementById('sdt');
+        var inputOTP = document.getElementById('OTP');
         var Login = document.getElementById("btn_login");
         var Verify = document.getElementById("btn_verify");
-      Login.onclick = function(){
+
+
+    Login.onclick= function() {
         
-        Form1.style.left = "-600px";
-        Form2.style.left = "50%";
-        Form2.style.visibility = "visible";
-      }
+           if( !inputPhone.value)
+            {
+                    alert("Hãy nhập số điện thoại của bạn!");
+                    inputPhone.value ="";
+                    inputPhone.focus();
+                }
+            else  {
+                console.log(inputPhone.value);
+                Form1.style.left = "-600px";
+                Form2.style.left = "50%";
+                Form2.style.visibility = "visible";
+            }
+      } 
+
       Verify.onclick = function(){
-        alert("Đăng nhập thành công!");
-        location.replace("Dangkythanhvien.html");
-      }
+        if( !inputOTP.value)
+        {
+            alert("Hãy nhập mã OTP mà bạn được nhận để thực hiện đăng nhập!");
+            inputOTP.value ="";
+            inputOTP.focus();
+        }
+        else{
+            alert("Đăng nhập thành công!");
+            window.location.href = "Dangkythanhvien.html";
+            console.log(this);
+        }
+        
+           
+        }  
     </script>  
 </body>
 </html>
