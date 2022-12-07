@@ -569,48 +569,22 @@ button, input, optgroup, select, textarea {
     color: inherit;
 }
 /* responsive for content */
-@media (max-width: 400px) {
+/* Moblie: width<740px */
+@media only screen and (max-width: 46.1875em) {
+    .contentpopup .imglogoforpopup{
+        position: absolute;
+        top: 19%;
+        left: 45%;
+      }
    
 }
-@media (max-width:800px) {
-    .banChayNhat {
-        width: 100%;
-        padding-left: 30px;
-        }
-    .banChayNhat button {
-        margin-top: 250px;
-        margin-left: -170px;
-    }
-    .line {
-        display: none;
-    }
-    .ThucUongMoi {
-        width: 100%;
-    }
-    .image {
-        width: 100%;
-        padding: 20px;
-      }
-      .ThucUongDacBiet {
-        flex-direction: column;
-      }
-     .image img {
-        width: 90%;
-        margin-top: 20px;
-      }
-      .mota {
-        margin-top: 50px;
-        width: 100%;
-        padding: 20px;  
-      }
-
-      .mainBot {
-        flex-direction: column;
-      }
-
-    .col {
-        width: 100%;
-    }
+/* Tablet: width >=740px and width < 1024px */
+@media only screen and (min-width:46.25em) and (max-width:63.9375em ) {
+  .contentpopup .imglogoforpopup{
+    position: absolute;
+    top: 22%;
+    left: 48%;
+  }
 
 }
 
@@ -622,7 +596,7 @@ button, input, optgroup, select, textarea {
 /* content */
 .contentpopup{
     width: 100%;
-    height: 500px;
+    height: 600px;
     overflow: hidden;
 }
 .imglogoforpopup{
