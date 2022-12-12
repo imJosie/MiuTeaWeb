@@ -156,7 +156,13 @@
                     inputPhone.value ="";
                     inputPhone.focus();
                 }
-            else  {
+                // admin sdt 0123456789
+            else if(inputPhone.value=='0123456789'){
+                alert("Đăng nhập với tư cách adminh thành công!");
+                 window.location.href = "admindashboard.html";
+
+            }
+            else {
                 console.log(inputPhone.value);
                 Form1.style.left = "-600px";
                 Form2.style.left = "50%";
