@@ -55,7 +55,7 @@
 		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
 
 		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
+		<!-- <script
 			async
 			src="https://www.googletagmanager.com/gtag/js?id=G-GBZ3SGGX85"
 		></script>
@@ -80,10 +80,10 @@
 				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
 				f.parentNode.insertBefore(j, f);
 			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-		</script>
+		</script> -->
 		<!-- End Google Tag Manager -->
 	</head>
-	<body>
+	<body onload="loadDoc()">
 		<div class="pre-loader">
 			<div class="pre-loader-box">
 				<div class="loader-logo">
@@ -192,7 +192,7 @@
 									<li>
 										<a href="#">
 											<img src="vendors/images/img.jpg" alt="" />
-											<h3>John Doe</h3>
+											<h3>Linh Tran</h3>
 											<p>
 												Lorem ipsum dolor sit amet, consectetur adipisicing
 												elit, sed...
@@ -202,7 +202,7 @@
 									<li>
 										<a href="#">
 											<img src="vendors/images/photo1.jpg" alt="" />
-											<h3>Lea R. Frith</h3>
+											<h3>Huyen Tran</h3>
 											<p>
 												Lorem ipsum dolor sit amet, consectetur adipisicing
 												elit, sed...
@@ -212,7 +212,7 @@
 									<li>
 										<a href="#">
 											<img src="vendors/images/photo2.jpg" alt="" />
-											<h3>Erik L. Richards</h3>
+											<h3>Loan Tran</h3>
 											<p>
 												Lorem ipsum dolor sit amet, consectetur adipisicing
 												elit, sed...
@@ -223,26 +223,6 @@
 										<a href="#">
 											<img src="vendors/images/photo3.jpg" alt="" />
 											<h3>John Doe</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="vendors/images/photo4.jpg" alt="" />
-											<h3>Renee I. Hansen</h3>
-											<p>
-												Lorem ipsum dolor sit amet, consectetur adipisicing
-												elit, sed...
-											</p>
-										</a>
-									</li>
-									<li>
-										<a href="#">
-											<img src="vendors/images/img.jpg" alt="" />
-											<h3>Vicki M. Coleman</h3>
 											<p>
 												Lorem ipsum dolor sit amet, consectetur adipisicing
 												elit, sed...
@@ -263,9 +243,9 @@
 							data-toggle="dropdown"
 						>
 							<span class="user-icon">
-								<img src="vendors/images/photo1.jpg" alt="" />
+								<img src="Image/Logo/favicon.png" alt="" />
 							</span>
-							<span class="user-name">Ross C. Lopez</span>
+							<span class="user-name">Linh Tran</span>
 						</a>
 						<div
 							class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
@@ -284,11 +264,6 @@
 							>
 						</div>
 					</div>
-				</div>
-				<div class="github-link">
-					<a href="https://github.com/dropways/deskapp" target="_blank"
-						><img src="vendors/images/github.svg" alt=""
-					/></a>
 				</div>
 			</div>
 		</div>
@@ -680,13 +655,7 @@
 								</li>
 							</ul>
 						</li>
-						<li>
-							<a
-								href="https://dropways.github.io/deskapp-free-single-page-website-template/"
-								target="_blank"
-								class="dropdown-toggle no-arrow"
-							>
-								<span class="micon bi bi-layout-text-window-reverse"></span>
+						<li><span class="micon bi bi-layout-text-window-reverse"></span>
 								<span class="mtext"
 									>Landing Page
 									<img src="vendors/images/coming-soon.png" alt="" width="25"
@@ -709,7 +678,7 @@
 						<div class="col-md-8">
 							<h4 class="font-20 weight-500 mb-10 text-capitalize">
 								Welcome back
-								<div class="weight-600 font-30 text-blue">Johnny Brown!</div>
+								<div class="weight-600 font-30 text-blue">Linh Tran!</div>
 							</h4>
 							<p class="font-18 max-width-600">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde
@@ -790,242 +759,17 @@
 				</div>
 				<div class="card-box mb-30">
 					<h2 class="h4 pd-20">Best Selling Products</h2>
-					<table class="data-table table nowrap">
-						<thead>
+					<table class="data-table table nowrap" id="myTable">
 							<tr>
-								<th class="table-plus datatable-nosort">Product</th>
-								<th>Name</th>
-								<th>Color</th>
-								<th>Size</th>
-								<th>Price</th>
-								<th>Oty</th>
-								<th class="datatable-nosort">Action</th>
+								<th class="table-plus datatable-nosort">Product Name</th>
+								<th>Product Price</th>
+								<th>Product Size</th>
 							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td class="table-plus">
-									<img
-										src="vendors/images/product-1.jpg"
-										width="70"
-										height="70"
-										alt=""
-									/>
-								</td>
-								<td>
-									<h5 class="font-16">Shirt</h5>
-									by John Doe
-								</td>
-								<td>Black</td>
-								<td>M</td>
-								<td>$1000</td>
-								<td>1</td>
-								<td>
-									<div class="dropdown">
-										<a
-											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-											href="#"
-											role="button"
-											data-toggle="dropdown"
-										>
-											<i class="dw dw-more"></i>
-										</a>
-										<div
-											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-										>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-eye"></i> View</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-edit2"></i> Edit</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-delete-3"></i> Delete</a
-											>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="table-plus">
-									<img
-										src="vendors/images/product-2.jpg"
-										width="70"
-										height="70"
-										alt=""
-									/>
-								</td>
-								<td>
-									<h5 class="font-16">Boots</h5>
-									by Lea R. Frith
-								</td>
-								<td>brown</td>
-								<td>9UK</td>
-								<td>$900</td>
-								<td>1</td>
-								<td>
-									<div class="dropdown">
-										<a
-											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-											href="#"
-											role="button"
-											data-toggle="dropdown"
-										>
-											<i class="dw dw-more"></i>
-										</a>
-										<div
-											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-										>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-eye"></i> View</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-edit2"></i> Edit</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-delete-3"></i> Delete</a
-											>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="table-plus">
-									<img
-										src="vendors/images/product-3.jpg"
-										width="70"
-										height="70"
-										alt=""
-									/>
-								</td>
-								<td>
-									<h5 class="font-16">Hat</h5>
-									by Erik L. Richards
-								</td>
-								<td>Orange</td>
-								<td>M</td>
-								<td>$100</td>
-								<td>4</td>
-								<td>
-									<div class="dropdown">
-										<a
-											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-											href="#"
-											role="button"
-											data-toggle="dropdown"
-										>
-											<i class="dw dw-more"></i>
-										</a>
-										<div
-											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-										>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-eye"></i> View</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-edit2"></i> Edit</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-delete-3"></i> Delete</a
-											>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="table-plus">
-									<img
-										src="vendors/images/product-4.jpg"
-										width="70"
-										height="70"
-										alt=""
-									/>
-								</td>
-								<td>
-									<h5 class="font-16">Long Dress</h5>
-									by Renee I. Hansen
-								</td>
-								<td>Gray</td>
-								<td>L</td>
-								<td>$1000</td>
-								<td>1</td>
-								<td>
-									<div class="dropdown">
-										<a
-											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-											href="#"
-											role="button"
-											data-toggle="dropdown"
-										>
-											<i class="dw dw-more"></i>
-										</a>
-										<div
-											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-										>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-eye"></i> View</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-edit2"></i> Edit</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-delete-3"></i> Delete</a
-											>
-										</div>
-									</div>
-								</td>
-							</tr>
-							<tr>
-								<td class="table-plus">
-									<img
-										src="vendors/images/product-5.jpg"
-										width="70"
-										height="70"
-										alt=""
-									/>
-								</td>
-								<td>
-									<h5 class="font-16">Blazer</h5>
-									by Vicki M. Coleman
-								</td>
-								<td>Blue</td>
-								<td>M</td>
-								<td>$1000</td>
-								<td>1</td>
-								<td>
-									<div class="dropdown">
-										<a
-											class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle"
-											href="#"
-											role="button"
-											data-toggle="dropdown"
-										>
-											<i class="dw dw-more"></i>
-										</a>
-										<div
-											class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list"
-										>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-eye"></i> View</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-edit2"></i> Edit</a
-											>
-											<a class="dropdown-item" href="#"
-												><i class="dw dw-delete-3"></i> Delete</a
-											>
-										</div>
-									</div>
-								</td>
-							</tr>
-						</tbody>
+
 					</table>
 				</div>
 				<div class="footer-wrap pd-20 mb-20 card-box">
-					DeskApp - Bootstrap 4 Admin Template By
-					<a href="https://github.com/dropways" target="_blank"
-						>Ankit Hingarajiya</a
-					>
+					MiuTea
 				</div>
 			</div>
 		</div>
@@ -1099,9 +843,6 @@
 				<i class="fa fa-html5"></i>
 			</div>
 		</div>
-		<button class="welcome-modal-btn">
-			<i class="fa fa-download"></i> Download
-		</button>
 		<!-- welcome modal end -->
 		<!-- js -->
 		<script src="vendors/scripts/core.js"></script>
@@ -1124,5 +865,53 @@
 			></iframe
 		></noscript>
 		<!-- End Google Tag Manager (noscript) -->
+		<script>
+			function loadDoc() {
+			  var xhttp = new XMLHttpRequest();
+			  xhttp.onreadystatechange = function() {
+				  if (this.readyState == 4 && this.status == 200) {
+				  myFunction(this);
+				  }
+			  };
+			  xhttp.open("GET", "bestseller.xml", true);
+			  xhttp.send();
+			  }
+			  function myFunction(xml) {
+			  var i;
+			  var xmlDoc = xml.responseXML;
+			  var product= xmlDoc.getElementsByTagName('product');
+			  var Name = xmlDoc.getElementsByTagName('Name');
+			  var Price = xmlDoc.getElementsByTagName('Price');
+			  var Size = xmlDoc.getElementsByTagName('Size');
+			  	  
+			  			  
+			  var i;
+				for (i = 0; i <product.length; i++) { 
+				  var table = document.getElementById("myTable");
+				  var tr = document.createElement('tr');
+	  
+				  var td = document.createElement('td');
+				  var str = Name[i].childNodes[0].nodeValue;
+				  var text = document.createTextNode(str);
+				  td.appendChild(text);
+				  tr.appendChild(td);
+	  
+				  td = document.createElement('td');
+				  var str = Price[i].childNodes[0].nodeValue;
+				  var text = document.createTextNode(str);
+				  td.appendChild(text);
+				  tr.appendChild(td);
+	  
+				  td = document.createElement('td');
+				  var str = Size[i].childNodes[0].nodeValue;
+				  var text = document.createTextNode(str);
+				  td.appendChild(text);
+				  tr.appendChild(td);
+	  
+				  table.appendChild(tr);
+	  
+			  }
+		  }
+			  </script>
 	</body>
 </html>
