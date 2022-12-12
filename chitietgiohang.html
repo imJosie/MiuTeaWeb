@@ -6,6 +6,13 @@
         <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
         <title>Chi tiết giỏ hàng</title>
         <link rel="stylesheet" href="chitietgiohang.css">
+        <script>
+            function dat_hang(){
+                location.assign("QR.html");
+            }
+            
+
+        </script>
     </head>
     <body class="body">
         <div class="header" >
@@ -133,7 +140,7 @@
                 <td>
                 </td>
                 <td>
-                    <button name="Dathang" type="button" style="padding: 8px 20px; width: 120px; font-size: 15px;border-radius: 12px; border: none; background-color: #EAAA75;">ĐẶT HÀNG</button>
+                    <button name="Dathang" type="button" style="padding: 8px 20px; width: 120px; font-size: 15px;border-radius: 12px; border: none; background-color: #EAAA75;" onclick="dat_hang()">ĐẶT HÀNG</button>
                 </td>
             </tr>
         </table>

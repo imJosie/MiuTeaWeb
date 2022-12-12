@@ -30,6 +30,18 @@
 .img{
   width: 500px;
   object-fit: cover;
+  margin: 0 50px;
+}
+
+.hide {
+  display: none;
+}
+.info {
+  font-size: 16px;
+  margin-left: 50px;
+}
+.tuyendungh1 {
+    font-size: 20px;
 }
 }
 
@@ -41,17 +53,22 @@
        
    }
 .box-con{
-    display: block;
-    width: 500px;
-    margin: 0 auto;
+    display: flex;
+    width: 800px;
+    margin: 10px 50px;
     object-fit: fill;
     
     
   }
-.img{
+
+.info {
+  margin-left: 20px;
+}
+/* .img{
     width: 500px;
     object-fit: cover;
-  }
+    margin: 10px 0;
+  } */
   
    
 }

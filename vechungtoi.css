@@ -47,13 +47,15 @@ height: 350px;
 .info{
     padding-left: 10px;
     width: 100%;
+    font-size: 16px;
 
 }
 .img{
-    height: 350px;
+    height: 200px;
 }
 .hinh{
     width: 100%;
+    
 }
 .row2{
     flex-direction: column;
@@ -81,6 +83,7 @@ height: 350px;
     }
     .hinh{
         width: 100%;
+        
     }
     .row2{
         flex-direction: column;
