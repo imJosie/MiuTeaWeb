@@ -749,8 +749,24 @@
 								<th class="table-plus datatable-nosort">Product Name</th>
 								<th>Product Price</th>
 								<th>Product Size</th>
+								<th colspan="2"> Action</th>
 							</tr>
 
+					</table>
+					<table id="tableUpdate" style="display: none;">
+						<tr>
+							<td style="padding: 5px;">Product Name</td>
+							<td style="padding: 5px;"><input type="text" id="PName"></td>
+						</tr>
+						<tr>
+							<td style="padding: 5px;">Product Price</td>
+							<td style="padding: 5px;"><input type="text" id="PPrice"></td>
+						</tr>
+						<tr>
+							<td style="padding: 5px;">Product Size</td>
+							<td style="padding: 5px;"><input type="text" id="PSize"></td>
+						</tr>
+						
 					</table>
 				</div>
 				<div class="footer-wrap pd-20 mb-20 card-box">
@@ -892,11 +908,52 @@
 				  var text = document.createTextNode(str);
 				  td.appendChild(text);
 				  tr.appendChild(td);
+
+				  td = document.createElement('td');
+           td.innerHTML = '<i class="icon-copy dw dw-edit2" style="padding: 10px;" ></i>'
+            tr.appendChild(td);
+
+			td = document.createElement('td');
+           td.innerHTML = '<i id="btn_delete" class="icon-copy dw dw-delete-3" style="padding: 10px;" onclick="delUser(this);"></i>'
+            tr.appendChild(td);
+
+			tr.addEventListener("mouseover", function(){
+                this.style.backgroundColor = "orange";
+            });
+            tr.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "transparent";
+            });
+    //     var count = 1;
+    //     tr.addEventListener('click', function() {
+           
+    //         if (count == 1) {
+    //             this.style.backgroundColor = "orange";
+    //             index = this.parentElement.rowIndex;
+    //         count = 0;        
+    //     }
+    //     else {
+    //         this.style.backgroundColor = "transparent";
+    //         count = 1;
+    //     }
+       
+    //     console.log(this);
+    // });
+
+			
 	  
 				  table.appendChild(tr);
 	  
 			  }
 		  }
+
+		  	// delete tablerow
+	// table = document.getElementById('myTable');
+
+	function delUser(User){
+        var s=User.parentNode.parentNode;
+        s.parentNode.removeChild(s);
+    }
+    
 			  </script>
 	</body>
 </html>

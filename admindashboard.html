@@ -995,6 +995,17 @@
 								<th>Address</th>
 								<th>Email</th>
 								<th>Phone number</th>
+								<th colspan="2"> Action</th>
+								<!-- <td>
+									<div class="table-actions">
+										
+									<i class="icon-copy dw dw-edit2" style="padding: 10px;"></i>
+										
+										
+									<i id="btn_delete" class="icon-copy dw dw-delete-3" style="padding: 10px;"></i>
+										
+									</div>
+								</td> -->
 								<!-- <th class="datatable-nosort">Actions</th> -->
 							</tr>
 					</table>
@@ -1191,11 +1202,54 @@
             var text = document.createTextNode(str);
             td.appendChild(text);
             tr.appendChild(td);
+			
+			td = document.createElement('td');
+           td.innerHTML = '<i class="icon-copy dw dw-edit2" style="padding: 10px;" ></i>'
+            tr.appendChild(td);
+
+			td = document.createElement('td');
+           td.innerHTML = '<i id="btn_delete" class="icon-copy dw dw-delete-3" style="padding: 10px;" onclick="delUser(this);"></i>'
+            tr.appendChild(td);
+
+			tr.addEventListener("mouseover", function(){
+                this.style.backgroundColor = "orange";
+            });
+            tr.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "transparent";
+            });
+    //     var count = 1;
+    //     tr.addEventListener('click', function() {
+           
+    //         if (count == 1) {
+    //             this.style.backgroundColor = "orange";
+    //             index = this.parentElement.rowIndex;
+    //         count = 0;        
+    //     }
+    //     else {
+    //         this.style.backgroundColor = "transparent";
+    //         count = 1;
+    //     }
+       
+    //     console.log(this);
+    // });
+
+			
+			
 
             table.appendChild(tr);
+			
 
         }
     }
+	// delete tablerow
+	// table = document.getElementById('myTable');
+
+	function delUser(User){
+        var s=User.parentNode.parentNode;
+        s.parentNode.removeChild(s);
+    }
+    
+
 		</script>
 	</body>
 </html>
