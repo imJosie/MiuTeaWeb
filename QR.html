@@ -1,20 +1,24 @@
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
-        <title>Tuyển dụng</title>
-         <link rel="stylesheet" href="vechungtoi.css">
-       
-             <script>
-                function dieu_huong(){
-                    location.assign("chitiettuyendung.html");
-                }
-            </script>
-            <link rel="stylesheet" href="tuyendung.css">
-    </head>
-    <body class="body">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
+    <title>Thanh toán bằng mã QR</title>
+    <link rel="stylesheet" href="QR.css">
+   
+</head>
+<body>
+    <script>
+        function clickbtn(){
+            alert("BẠN ĐÃ THANH TOÁN THÀNH CÔNG");
+            window.close("QR.html");
+            window.open("TrangChu.html")
+        }
+    </script>
+    <div id="container">
+        <!-- Header -->
         <div class="header" >
             <div style="display: flex; justify-content: right;margin-top: 10px;">
                 <div  class="search">
@@ -82,55 +86,21 @@
             
             
         </div >
-        <div class="topcontent">
-            
-                <div><img src="Image/tuyendung/NhanvienMiuTea.png" width="100%" </div>
-                
-                <div><h1 style="text-align: center;"class="text">TRỞ THÀNH NHÂN VIÊN CỦA<br/>GIA ĐÌNH MIUTEA</h1><br/></div>
-                
-                
-                <button style=" border: none; background-color: #DB9A5E;font-size: large;padding-top: 15px;padding-bottom: 15px;" class="button" type="button" onclick="dieu_huong()">CÁC VỊ TRÍ HIỆN TẠI</button>
-           
-                <img src="Image/tuyendung/nencontent.png" width="100%"
-                />
-                <img class="image" src="Image/tuyendung/Vector.png" width="80px" height="80px"/>
-                <p style="text-align: center;"class="content">“MiuTea với tâm huyết làm ra những ly đồ uống chất lượng từ những lá trà tươi mát của đồng quê Việt Nam. Những lá trà được vun trồng và chăm sóc theo quy trình chuẩn và đảm bảo vệ sinh an toàn cho người tiêu dùng. Mục tiêu cốt lõi là mang lá trà Việt Nam ra thị trường thế giới.”</p><br/>
-
-           
-            
-        </div>
-        <div class="main-row">
-            <div class="row1">
-                <div class="info">
-                    <h1 style="text-align: center;">CƠ HỘI VIỆC LÀM</h1>
-                    <p style="font-size: 26px;">Hiện nay, công việc phục vụ luôn có nhiều sự lựa chọn để đi làm thêm.Không gò bó, linh động trong thời gian làm việc chính là một trong những lí do hàng đầu khiến việc làm tại các quán trà sữa trở nên hot như vậy. Bạn có thể đăng kí làm part-time từ 4-5 tiếng hay full-time 7-8 tiếng tùy theo thời gian biểu của mình. Ngoài ra với lịch làm không cố định, có thể đổi ca làm giữa các nhân viên cho nhau cũng khiến cho nhân viên cảm thấy thật thoải mái, dễ chịu khi làm việc.</p>
-                </div>
-                <div class="hinh">
-                    <img class="img" src="Image/tuyendung/cohoivieclam.png" >
-                </div>
+        <!-- Content -->
+            <div class="contentpopup">
+               <!-- Đăng nhập -->
+                <div class="popup" id="popup1">
+                    <div class="btn_close"> &times;</div>
+                    <!-- <div class="logo"><img src="Image/Logo/logo.png" alt="Logo"></div> -->
+                    <div class="title">Hãy quét mã QR để thanh toán nhé!</div>
+                    <form action="#" class="form">
+                     <img src="Image/payment/QR.jpg" alt="" style="width:150px;height:150px; margin: 0px 40px 0px;">
+                    <input type="submit" value="XÁC NHẬN THANH TOÁN" id="btn_login" onclick="clickbtn()">
+                    </form>
+                 </div>
+                 <div> <img src="Image/Logo/LogoforLogin.png" alt="Logo" class="imglogoforpopup"></div>
             </div>
-            <div class="row2">
-                <div class="hinh">
-                    <img class="img" src="Image/tuyendung/moitruonglamviec.png"/>
-                </div>
-                <div class="info">
-                    <h1 style="text-align: center;">MÔI TRƯỜNG LÀM VIỆC</h1>
-                    <p style="font-size: 26px;">Làm việc trong các quán trà sữa, bạn sẽ thường xuyên được tiếp xúc, gặp gỡ với những người bạn mới chạc tuổi mình. Cùng đi làm thêm, cùng chung lứa tuổi sẽ khiến cho bạn dễ dàng hòa nhập hơn rất nhiều đúng không nào?</p>
-                </div>
-            </div>
-            <div class="row1">
-                <div class="info">
-                    <h1 style="text-align: center;">QUYỀN LỢI NHÂN VIÊN</h1>
-                    <p style="font-size: 26px;">Quy định nhân viên trong quán trà sữa sẽ bao gồm những quyền lợi nhất định như: nhân viên sẽ được hưởng tháng lương thứ 13, nhân đôi lương khi tăng ca, nhân 3 lương khi làm việc vào ngày lễ tết theo quy định luật lao động. Ngoài ra nhân viên sẽ được hưởng những chế độ đãi ngộ mà mỗi quán trà sữa đặt ra.</p>
-                </div>
-                <div class="hinh">
-                    <img class="img" src="Image/tuyendung/quyenloinhanvien.png"/>
-                </div>
-            </div>
-
-        </div>
-
-
+        <!-- footer -->
         <footer>
             <div class="row">
                 <div class="col">
@@ -156,7 +126,6 @@
             </div>
             
         </footer>
-
-                
-    </body>
+    </div>
+</body>
 </html>
