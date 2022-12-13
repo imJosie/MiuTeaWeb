@@ -8,9 +8,9 @@
     <title>Trà sữa MiuTea</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   
 
 </head>
 <body style="background-image:url('Image/banner/background.png');">
@@ -21,10 +21,20 @@
                 <form action="" id="search-box">
                     <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
                     <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
+                    <script>
+                        function searchProduct(){
+                            window.open("TimKiem.html", "_seft");
+                        }
+                    </script>
                 </form>
             </div>
             <div id="login-btn">
-                <a href="Dangnhap.html"> Đăng nhập</a>
+                <input class="button-no-bg" type="button" onclick="login()" value="Đăng nhập">
+                <script>
+                    function login(){
+                        window.open("Dangnhap.html","_self");
+                    }
+                </script>
             </div>
             <div>
                 <a href="chitietgiohang.html"><img id="cart" src="Image/Logo/cart.png" alt=""></a>
@@ -53,7 +63,7 @@
                 <ul>
                     <li><a href="TrangChu.html">Trang chủ</a></li>
                     <li><a href="Cuahang.html">Cửa hàng</a></li>
-                    <li><a href="Menu.html">Thực đơn</a></li>
+                    <li><a href="Menuspbanchay.html">Thực đơn</a></li>
                     <li><a href="tintucvauudai.html">Tin tức & Ưu đãi</a>
                         <ul>
                         <li><a href="tintuc.html">Tin tức & Sự kiện</a></li>
@@ -63,14 +73,14 @@
                     <li>
                         <a href="LienHe.html">Liên hệ</a>
                             <ul>
-                                <li><a href="#">Góp ý</a></li>
-                                <li><a href="#">Hợp tác</a></li>
+                                <li><a href="LienHe.html">Góp ý</a></li>
+                                <li><a href="LienHe.html">Hợp tác</a></li>
                             </ul>
                     </li>
                             <li>
                                 <a style="width: 150px;" href="VeChungToi.html">Về chúng tôi</a>
                                 <ul>
-                                <li style="width: 150px;"><a href="#">Khởi nguồn</a></li>
+                                <li style="width: 150px;"><a href="KhoiNguon.html">Khởi nguồn</a></li>
                                 <li style="width: 150px;"><a href="tuyendung.html">Tuyển dụng</a></li>
                                 <li style="width: 150px;"><a href="thanhvien.html">Thành viên</a></li>
                                 </ul>
@@ -85,62 +95,75 @@
    
     <div class="center">
          <!-- slider -->
-        <div class="slider">
-         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-            <li data-target="#myCarousel" data-slide-to="1"></li>
-            <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
+        <div class="slider" >
+            <div class="w3-content w3-display-container" style="max-width:100%">
+                <img class="mySlides" src="Image/banner/bannerTinTuc/banner.jpg" style="width:100%">
+                <img class="mySlides" src="Image/banner/bannerTinTuc/banner_Summer.jpg" style="width:100%">
+                <img class="mySlides" src="Image/banner/bannerTinTuc/tintuc4.jpg" style="width:100%">
+                <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+                  <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+                  <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+                  <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+                </div>
+              </div>
 
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-            <div class="item active">
-                <img src="Image/banner/bannerTinTuc/banner.jpg" alt="" style="width:100%;">
-            </div>
-
-            <div class="item">
-                <img src="Image/banner/bannerTinTuc/banner_Summer.jpg" alt="" style="width:100%;">
-            </div>
-            
-            <div class="item">
-                <img src="Image/banner/bannerTinTuc/tintuc4.jpg" alt="" style="width:100%;">
-            </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left"></span>
-            <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right"></span>
-            <span class="sr-only">Next</span>
-            </a>
-        </div>
-        </div>
+              <script>
+                var slideIndex = 1;
+                showDivs(slideIndex);
+                
+                function plusDivs(n) {
+                  showDivs(slideIndex += n);
+                }
+                
+                function currentDiv(n) {
+                  showDivs(slideIndex = n);
+                }
+                
+                function showDivs(n) {
+                  var i;
+                  var x = document.getElementsByClassName("mySlides");
+                  var dots = document.getElementsByClassName("demo");
+                  if (n > x.length) {slideIndex = 1}
+                  if (n < 1) {slideIndex = x.length}
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" w3-white", "");
+                  }
+                  x[slideIndex-1].style.display = "block";  
+                  dots[slideIndex-1].className += " w3-white";
+                  setTimeout(showDivs, 2000); // Change image every 2 seconds
+                }
+                </script>
+                
+        </div> 
+        
         <!-- Bán chạy nhất + Món mới -->
         <div style="width: 100%;"> 
             <!-- bán chạy nhất -->
             <div class="banChayNhat">
-                <h4>Bán chạy nhất</h4>
-                <img src="Image/banner/bannerTinTuc/tintuc5.jpg" >
-                <button><a href="#">Khám phá ngay</a></button>
+                <h4 style="color: #DB9A5E; font-size: 18px; font-family: Fahwang-Bold;">Bán chạy nhất</h4>
+                <a href="Menuspbanchay.html"><img src="Image/banner/bannerTinTuc/tintuc5.jpg" ></a>
+                <button><a href="Menuspbanchay.html">Khám phá ngay</a></button>
             </div>
             <div class="line"><img style="float:left; margin-top: 70px;" src="Image/VeChungToi/Line 1.png">
                 </div>
                 <!-- món mới -->
             <div class="ThucUongMoi">
-                <h4>Món mới</h4>
-                <img src="Image/banner/bannerTinTuc/tintuc4.jpg" > 
-                <button><a href="#">Khám phá ngay</a></button>  
+                <h4 style="color: #DB9A5E; font-size: 18px; font-family: Fahwang-Bold;">Món mới</h4>
+                <a href="menumoinhat.html"><img src="Image/banner/bannerTinTuc/tintuc4.jpg" > </a>
+                
+                <button><a href="menumoinhat.html">Khám phá ngay</a></button>  
             </div>
         </div>
         <!-- Thức uống đặc biệt -->
          <div class="ThucUongDacBiet" style="width: 100%;display: flex;">
             <div class="image">
-                <img src="Image/banner/bannerTinTuc/thucUongDacBiet.jpg" >
+                <a href="menumoinhat.html"><img src="Image/banner/bannerTinTuc/thucUongDacBiet.jpg" ></a>
+                
             </div>
             
             <div class="mota">
@@ -149,7 +172,7 @@
                     kết hợp cùng với những loại trái cây nhiệt đới khác nhau 
                     (đào, xoài, dứa, vải, chanh…) để tạo thành loại trà có 
                     hương và vị trái cây thanh mát, dễ uống và giải nhiệt tốt.</p>
-                    <button><a href="#">Đặt ngay</a></button>
+                    <button><a href="menumoinhat.html">Đặt ngay</a></button>
             </div>
          </div> 
          <br>
@@ -164,8 +187,7 @@
                 <!-- Danh sách quán -->
                 <div class="col">
                     <div class="cuaHang"><a href="Cuahang.html"><img src="Image/VeChungToi/Cửa hàng.png" alt="Cửa hàng">
-                        <!-- <a href=""><span>KHỞI NGUỒN <br>
-                            THƯƠNG HIỆU BẮT NGUỒN TỪ LÁ TRÀ</span></a> -->
+                    
                     </div>
                     <div class="clear"></div>
                 </div>
@@ -173,7 +195,7 @@
                 <div class="col">
                     <div class="wrap fl">
                         <div class="boxHome lazy-start fadeIn" data-eff="fadeIn" data-delay="0.3" style="animation-delay: 0.3s;">
-                            <div class="title"><h3>Tin mới nhất</h3><a href="tintuc.html"><span><i>Xem toàn bộ</i> </span></a></div>
+                            <div class="title"><h3> Tin mới nhất</h3><a href="tintuc.html"><span><i>Xem toàn bộ</i> </span></a></div>
                             <div class="content">
                                 <div class="listNew">
                                     <div class="news">
@@ -222,14 +244,14 @@
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="clear"></div> -->
+                    
                 </div>
-            <!-- </div> -->
+            
         </div>
     </div>  
 
     <footer>
-        <div class="row">
+        <div class="row"  >
             <div class="col">
                 <a href="TrangChu.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
             <div class="col">
@@ -238,9 +260,9 @@
                     <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
             </div>
             <div class="col">
-                <a href="LienHe.html"><h3>Liên hệ</h3> </a>
-                    <a href="#"><p>Góp ý</p> </a>
-                    <a href="#"><p>Hợp tác</p> </a>
+                <h3><a href="LienHe.html">Liên hệ </a></h3>
+                    <a href="LienHe.html"><p>Góp ý</p> </a>
+                    <a href="LienHe.html"><p>Hợp tác</p> </a>
             </div>
             <div class="col3">
                 <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
