@@ -59,37 +59,54 @@
             <div class="logo">
                 <a  href="TrangChu.html"><img id="logo_ngang" src="Image/Logo/logo ngang.png" ></a>
             </div>
-            <nav class="menu hidden" >
-                <ul>
-                    <li><a href="TrangChu.html">Trang chủ</a></li>
-                    <li><a href="Cuahang.html">Cửa hàng</a></li>
-                    <li><a href="Menuspbanchay.html">Thực đơn</a></li>
-                    <li><a href="tintucvauudai.html">Tin tức & Ưu đãi</a>
-                        <ul>
-                        <li><a href="tintuc.html">Tin tức & Sự kiện</a></li>
-                        <li><a href="uudai.html">Khuyến mãi</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="LienHe.html">Liên hệ</a>
-                            <ul>
-                                <li><a href="LienHe.html">Góp ý</a></li>
-                                <li><a href="LienHe.html">Hợp tác</a></li>
-                            </ul>
-                    </li>
-                            <li>
-                                <a style="width: 150px;" href="VeChungToi.html">Về chúng tôi</a>
-                                <ul>
-                                <li style="width: 150px;"><a href="KhoiNguon.html">Khởi nguồn</a></li>
-                                <li style="width: 150px;"><a href="tuyendung.html">Tuyển dụng</a></li>
-                                <li style="width: 150px;"><a href="thanhvien.html">Thành viên</a></li>
-                                </ul>
-                            </li>
-                    </ul>
-            </nav>
+            
+            <div class="topnav" id="myTopnav">
+           
+                <a href="TrangChu.html">Trang chủ</a>
+                <a href="Cuahang.html">Cửa hàng</a>
+                <a href="Menuspbanchay.html">Thực đơn</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Tin tức & Ưu đãi
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="tintuc.html">Tin tức & Sự kiện</a>
+                    <a href="uudai.html">Khuyến mãi</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Liên hệ
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="LienHe.html">Góp ý</a>
+                    <a href="LienHe.html">Hợp tác</a>
+                  </div>
+                </div> 
+                <div class="dropdown">
+                    <button class="dropbtn">Về chúng tôi
+                        <i class="fa fa-caret-down"></i>
+                      </button>
+                  <div class="dropdown-content">
+                    <a href="KhoiNguon.html">Khởi nguồn</a>
+                    <a href="tuyendung.html">Tuyển dụng</a>
+                    <a href="thanhvien.html">Thành viên</a>
+                  </div>
+                 
+                </div> 
+                <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+              </div>
+              <script>
+                function myFunction() {
+                  var x = document.getElementById("myTopnav");
+                  if (x.className === "topnav") {
+                    x.className += " responsive";
+                  } else {
+                    x.className = "topnav";
+                  }
+                }
+                </script>
         </div>
-        
-        
         
     </div >
    
