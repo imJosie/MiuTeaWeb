@@ -15,7 +15,7 @@
 .content {
     color: black;
     position: absolute;
-    top: 650px;
+    top: 750px;
     left: 70px;
     right: 70px;
     font-size: 28px;
@@ -23,7 +23,7 @@
     }
 .image {
         position: absolute;
-        top: 700px;
+        top: 750px;
         left: 700px;
     }
 .topcontent{
@@ -147,17 +147,19 @@ height: 350px;
         }
     .image {
             top: 450px;
-            left: 420px;
+            left: 380px;
+            width: 60px;
+            height: 60px;
         }
     .content {
-            top: 400px;
+            top: 420px;
             left: 70px;
             right: 70px;
             font-size: 16px;
             
             }
     .text {
-                font-size: 22px;
+                font-size: 18px;
             }
     
 }
