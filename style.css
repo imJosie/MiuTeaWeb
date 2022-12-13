@@ -31,6 +31,7 @@ body {
     display: inline-block;
     padding-bottom: 0;
 }
+
 /* search bar */
 #search-box{
     background: #fff;
@@ -64,14 +65,21 @@ body {
     text-transform: none;
     padding-top: 10px;
 }
-#login-btn a {
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 15px;
+.button-no-bg {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    font-weight: bold;
 }
-#login-btn a:hover {
+
+.button-no-bg:hover {
     color: #60646D;
-    
+    font-weight: bolder;
+}
+.button-no-bg:active {
+    color: #60646D;
 }
 /* shopping cart */
 #cart {
@@ -84,6 +92,7 @@ body {
 }
 .cart a:hover{
     background-color: none;  
+    size: 110%;
 }
 
 /* logo */
@@ -198,12 +207,12 @@ text-align: center;
 /* footer part */
 footer {
     margin-bottom: 0;
-     clear: both;
+    clear: both;
     background: #80848c;
     width: 100%;
     height: 180px;
+    bottom: 0;
 }
-
 .logo {
     width: 100px;
     height: auto;
@@ -221,13 +230,22 @@ footer {
     flex-basis: 25%;
     padding: 10px;
 }
+.col1, .col2 {
+    flex-basis: 25%;
+    padding: 10px;
+}
+
 .col3 {
     flex-basis: 25%;
     padding: 10px;
 }
-.col a {
+.row a {
     text-decoration: none;
 }
+.col a:hover {
+    color: #DB9A5E;
+}
+
 .col3 .icon {
     width: 40px;
     height: auto;
@@ -235,7 +253,9 @@ footer {
 
 /* responsive for header and footer */
 @media (max-width: 400px) {
-   
+   .col1 {
+    display: none;
+   }
 }
 @media (max-width:800px) {
     .toggle-btn{
@@ -289,24 +309,46 @@ footer {
 }
 
 
+
 /* running banner */
 .center {
     margin-bottom: 120px;
     width: 100%;
+    min-height: 100vh;
 }
-
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+.w3-content,
+.w3-content{max-width:980px}
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-display-container:hover .w3-display-hover{display:block}.w3-display-container:hover span.w3-display-hover{display:inline-block}.w3-display-hover{display:none}
+.w3-center{text-align:center!important}
+.w3-center .w3-bar{display:inline-block;width:auto}
+.w3-badge,.w3-tag{background-color:#000;color:#fff;display:inline-block;padding-left:8px;padding-right:8px;text-align:center}.w3-badge{border-radius:50%}
+.w3-border{border:1px solid #ccc!important}
+.w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
+.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
+.w3-hover-text-khaki:hover{color:#b4aa50!important}
+.w3-left{float:left!important}.w3-right{float:right!important}
 .slider img {
     width: 100%;
     height: auto;
     align-self: center;
 }
 
+
+
+
 .banChayNhat{
     width: 49%;
     float: left;
     padding-left: 30px;
 }
-
+.banChayNhat  a:hover {
+    font-size: 17px;
+    color: #935217 ;
+}
 .banChayNhat h4 {
     color: #DB9A5E;
     margin: 20px 0;
@@ -316,6 +358,10 @@ footer {
     width: 90%;
     align-content: center;
     position: relative;
+}
+.banChayNhat  img:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 3px 3px 3px #e5af7c;
 }
 .banChayNhat button {
     background-color: transparent;
@@ -338,6 +384,14 @@ footer {
     width: 49%;
     float: right;
     padding-left: 50px;
+}
+.ThucUongMoi a:hover {
+    font-size: 17px;
+    color: #935217 ;
+}
+.ThucUongMoi  img:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 3px 3px 3px #e5af7c;
 }
 .ThucUongMoi h4 {
     color: #DB9A5E;
@@ -365,7 +419,10 @@ footer {
     color: #fff;
 }
 
-
+.ThucUongDacBiet  img:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 3px 3px 3px #e5af7c;
+}
 .image {
     width: 60%;
     padding: 20px;
@@ -394,6 +451,11 @@ footer {
     text-align: center;
     margin-top: 20px;
 }
+.mota button  a:hover {
+    font-size: 17px;
+    color: #935217 ;
+}
+
 .mainBot{
     height: auto;
     width: 100%;
@@ -410,7 +472,10 @@ footer {
     height: auto;
     border: 1px solid #fff;
 }
-
+.khoiNguon  img:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 3px 3px 3px #e5af7c;
+}
 .khoiNguon span {
     /* -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0,0,0,0); */
@@ -429,7 +494,10 @@ footer {
     font-weight: normal !important;
 }
 /* Cửa hàng */
-
+.cuaHang  img:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 3px 3px 3px #e5af7c;
+}
 .cuaHang img {
     width: 100%;
     height: auto;
@@ -453,7 +521,9 @@ footer {
     float: left;
     
 }
-
+.news  img:hover {
+    transform: scale(1.02, 1.02);
+}
 
 .news .caption {
     overflow: hidden;
@@ -500,7 +570,16 @@ footer {
     display: block;
     font-size: 13px;
     line-height: 21px;
+    text-decoration: none;
+}
+.boxHome .title a:active {
+    color: #DB9A5E;
+    font-weight: bold;
+}
 
+.boxHome .title a:hover {
+    color: #DB9A5E;
+    font-weight: bold;
 }
 
 .listNew {
