@@ -50,7 +50,7 @@
                     <ul>
                         <li><a href="TrangChu.html">Trang chủ</a></li>
                         <li><a href="Cuahang.html">Cửa hàng</a></li>
-                        <li><a href="Menu.html">Thực đơn</a></li>
+                        <li><a href="Menuspbanchay.html">Thực đơn</a></li>
                         <li><a href="tintucvauudai.html">Tin tức & Ưu đãi</a>
                             <ul>
                             <li><a href="tintuc.html">Tin tức & Sự kiện</a></li>
@@ -67,9 +67,9 @@
                                 <li>
                                     <a style="width: 150px;" href="VeChungToi.html">Về chúng tôi</a>
                                     <ul>
-                                    <li style="width: 150px;"><a href="#">Khởi nguồn</a></li>
-                                    <li style="width: 150px;"><a href="#">Tuyển dụng</a></li>
-                                    <li style="width: 150px;"><a href="#">Thành viên</a></li>
+                                    <li style="width: 150px;"><a href="KhoiNguon.html">Khởi nguồn</a></li>
+                                    <li style="width: 150px;"><a href="tuyendung.html">Tuyển dụng</a></li>
+                                    <li style="width: 150px;"><a href="thanhvien.html">Thành viên</a></li>
                                     </ul>
                                 </li>
                         </ul>
@@ -141,16 +141,16 @@
          <footer>
             <div class="row">
                 <div class="col">
-                    <a href=""><img class="logo" src="Image/Logo/logo.png" ></a></div>
+                    <a href="TrangChu.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
                 <div class="col">
-                    <a href="#"><h3>Về chúng tôi</h3> </a>
-                        <a href="#"><p>Khởi nguồn</p> </a>
-                        <a href="#"><p>Quy định chung</p> </a>
+                    <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
+                        <a href="KhoiNguon.html"><p>Khởi nguồn</p> </a>
+                        <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
                 </div>
                 <div class="col">
-                    <a href="#"><h3>Liên hệ</h3> </a>
-                        <a href="#"><p>Góp ý</p> </a>
-                        <a href="#"><p>Hợp tác</p> </a>
+                    <a href="LienHe.html"><h3>Liên hệ</h3> </a>
+                        <a href="Gopy.html"><p>Góp ý</p> </a>
+                        <a href="LienHe.html"><p>Hợp tác</p> </a>
                 </div>
                 <div class="col3">
                     <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
@@ -164,5 +164,16 @@
             
         </footer>
    </div>
+
+   <script>
+ var tintuc = document.getElementsByClassName('box-con');
+ Array.from(tintuc).forEach(e => {
+  e.addEventListener('click', function(e) {
+    window.location = "TrangChu.html";
+     console.log(this);
+  });
+});
+
+   </script>
 </body>
 </html>
