@@ -632,18 +632,7 @@ button, input, optgroup, select, textarea {
     color: inherit;
 }
 /* responsive for content */
-@media (max-width: 400px) {
-    .banChayNhat button {
-        margin-top: 100px;
-        margin-left: -170px;
-    }
-    .ThucUongMoi button {
-        margin-top: 100px;
-        margin-left: -160px;
-    }
-}
-
-@media (max-width:400px) {
+@media screen and (max-width: 400px) {
     .banChayNhat {
         width: 100%;
         padding-left: 30px;
@@ -689,14 +678,16 @@ button, input, optgroup, select, textarea {
         width: 100%;
     }
 
-@media (max-width:800px) {
+}
+
+@media screen and (max-width:800px) {
     .banChayNhat {
         width: 100%;
         padding-left: 30px;
         }
 
         .banChayNhat button {
-            margin-top: 100px;
+            margin-top: 220px;
             margin-left: -170px;
         }
     .line {
@@ -707,7 +698,7 @@ button, input, optgroup, select, textarea {
     }
 
     .ThucUongMoi button {
-        margin-top: 100px;
+        margin-top: 200px;
         margin-left: -160px;
     }
     .image {
