@@ -88,9 +88,8 @@
         </div >
         <!-- Content -->
             <div class="contentpopup">
-               <!-- Đăng nhập -->
                 <div class="popup" id="popup1">
-                    <div class="btn_close"> &times;</div>
+                    <div class="btn_close" id="btn_close"> &times;</div>
                     <!-- <div class="logo"><img src="Image/Logo/logo.png" alt="Logo"></div> -->
                     <div class="title">Hãy quét mã QR để thanh toán nhé!</div>
                     <form action="#" class="form">
@@ -100,6 +99,7 @@
                  </div>
                  <div> <img src="Image/Logo/LogoforLogin.png" alt="Logo" class="imglogoforpopup"></div>
             </div>
+             
         <!-- footer -->
         <footer>
             <div class="row">
@@ -127,5 +127,12 @@
             
         </footer>
     </div>
+    <script language="JavaScript">
+    var  btn_boqua = document.getElementById('btn_close');
+    btn_boqua.onclick =  function(){
+        window.location.href = "chitietdathang.html";
+        console.log(this);
+    }
+    </script> 
 </body>
 </html>
