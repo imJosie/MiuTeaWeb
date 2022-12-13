@@ -82,7 +82,7 @@
             <div class="contentdktv">
                <!-- Đăng ký thành viên-->
                 <div class="popupdktv">
-                    <div class="btn_close"> &times;</div>
+                    <div class="btn_close" id="btn_close"> &times;</div>
                     <!-- <div class="logo"><img src="Image/Logo/logo.png" alt="Logo"></div> -->
                     <div class="title">Đăng ký thành viên</div>
                     <form action="#" class="form">
@@ -91,6 +91,7 @@
                         <input class="element" type="email" name="email" placeholder="Email "> <br>
                         <input class="element" type="text" required name="sdt" placeholder="Số điện thoại *"> <br>
                         <input type="button" value="ĐĂNG KÝ" id="btn_submit">
+                        <a href="TrangChu.html" id="boqua"> Bỏ qua</a>
             
                     </form>
                  </div>
@@ -153,6 +154,12 @@
     }
         
       }
+
+    var  btn_boqua = document.getElementById('btn_close');
+    btn_boqua.onclick =  function(){
+        window.location.href = "TrangChu.html";
+        console.log(this);
+    }
     </script>  
 </body>
 </html>
