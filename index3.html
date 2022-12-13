@@ -54,18 +54,6 @@
 		/>
 		<link rel="stylesheet" type="text/css" href="vendors/styles/style.css" />
 
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != "dataLayer" ? "&l=" + l : "";
-				j.async = true;
-				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, "script", "dataLayer", "GTM-NXZMQSS");
-		</script> -->
 		<!-- End Google Tag Manager -->
 	</head>
 	<body onload="loadDoc()">
@@ -737,8 +725,33 @@
 					</div>
 					<div class="col-xl-4 mb-30">
 						<div class="card-box height-100-p pd-20">
-							<h2 class="h4 mb-20">Lead Target</h2>
-							<div id="chart6"></div>
+							<h2 class="h4 mb-20" style="padding-top: 40px;">UPDATE/ADD PRODUCT</h2>
+							<table id="tableUpdate" style="display: block;">
+								<tr>
+									<td style="padding: 5px;">Product Name</td>
+									<td style="padding: 5px;"><input type="text" id="PName"></td>
+								</tr>
+								<tr>
+									<td style="padding: 5px;">Product Price</td>
+									<td style="padding: 5px;"><input type="text" id="PPrice"></td>
+								</tr>
+								<tr>
+									<td style="padding: 5px;">Product Size</td>
+									<td style="padding: 5px;"><input type="text" id="PSize"></td>
+								</tr>
+								<tr>
+									<td style="padding: 5px;">Updated location</td>
+									<td style="padding: 5px;"><input type="text" id="Location"></td>
+								</tr>
+								<tr> <td><input type="button" value="Add Product" id="btn_Add" style="padding: 5px; border-radius: 15px; background-color: antiquewhite; margin-top: 30px; margin-left: 20px; border: 1px solid antiquewhite;"></td>
+									<td><input type="button" value="Update Product" id="btn_Update" style="padding: 5px; border-radius: 15px; background-color: rgb(237, 177, 98); margin-top: 30px; margin-left: 20px; border: 1px solid rgb(237, 177, 98);"></td>
+								</tr>
+								
+							</table>
+
+
+							<!-- 
+							<div id="chart6"></div> -->
 						</div>
 					</div>
 				</div>
@@ -753,22 +766,7 @@
 							</tr>
 
 					</table>
-					<table id="tableUpdate" style="display: none;">
-						<tr>
-							<td style="padding: 5px;">Product Name</td>
-							<td style="padding: 5px;"><input type="text" id="PName"></td>
-						</tr>
-						<tr>
-							<td style="padding: 5px;">Product Price</td>
-							<td style="padding: 5px;"><input type="text" id="PPrice"></td>
-						</tr>
-						<tr>
-							<td style="padding: 5px;">Product Size</td>
-							<td style="padding: 5px;"><input type="text" id="PSize"></td>
-						</tr>
-						
-					</table>
-				</div>
+				</div>				
 				<div class="footer-wrap pd-20 mb-20 card-box">
 					MiuTea
 				</div>
@@ -924,11 +922,18 @@
                 this.style.backgroundColor = "transparent";
             });
     //     var count = 1;
+	// 	PName=document.getElementById('PName');
+	// 	PPrice=document.getElementById('PPrice');
+	// 	PSize=document.getElementById('PSize');
     //     tr.addEventListener('click', function() {
            
     //         if (count == 1) {
     //             this.style.backgroundColor = "orange";
-    //             index = this.parentElement.rowIndex;
+	// 			PName = Name[i].childNodes[0].nodeValue;
+	// 			PPrice = Price[i].childNodes[0].nodeValue;
+	// 			PSize = Size[i].childNodes[0].nodeValue;
+
+                
     //         count = 0;        
     //     }
     //     else {
@@ -953,7 +958,131 @@
         var s=User.parentNode.parentNode;
         s.parentNode.removeChild(s);
     }
-    
+
+	var addProduct = document.getElementById('btn_Add')
+
+	addProduct.onclick =  function() {
+            var table = document.getElementById("myTable");
+            var tr = document.createElement('tr');
+
+            var td = document.createElement('td');
+            var str = document.getElementById("PName").value;
+            if (str == "") {
+                alert("Tên sản phẩm bị trống");
+                return;
+            }
+            var text = document.createTextNode(str);
+            td.appendChild(text);
+            tr.appendChild(td);
+
+            td = document.createElement('td');
+            var str = document.getElementById("PPrice").value;
+            if (str == "") {
+                alert("Giá sản phẩm bị trống");
+                return;
+            }
+            var text = document.createTextNode(str);
+            td.appendChild(text);
+            tr.appendChild(td);
+
+            td = document.createElement('td');
+            var str = document.getElementById("PSize").value;
+            var text = document.createTextNode(str);
+            td.appendChild(text);
+            tr.appendChild(td);
+
+			td = document.createElement('td');
+           td.innerHTML = '<i class="icon-copy dw dw-edit2" style="padding: 10px;" ></i>'
+            tr.appendChild(td);
+
+			td = document.createElement('td');
+           td.innerHTML = '<i id="btn_delete" class="icon-copy dw dw-delete-3" style="padding: 10px;" onclick="delUser(this);"></i>'
+            tr.appendChild(td);
+
+
+            tr.addEventListener("mouseover", function(){
+                this.style.backgroundColor = "orange";
+            });
+            tr.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "transparent";
+            });
+
+            table.appendChild(tr);
+
+			document.getElementById("PName").value = '';
+			document.getElementById("PPrice").value = '';
+			document.getElementById("PSize").value = '';
+
+
+
+        }
+
+		var upDate = document.getElementById('btn_Update');
+		upDate.onclick =  function () { 
+
+
+        
+			var table = document.getElementById("myTable");
+            var tr = document.createElement('tr');
+
+            var td = document.createElement('td');
+            var str = document.getElementById("PName").value;
+			if (str == "") {
+                alert("Tên sản phẩm bị trống");
+                return;
+            }
+            var text = document.createTextNode(str);
+            td.appendChild(text);
+            tr.appendChild(td);
+
+            td = document.createElement('td');
+            var str = document.getElementById("PPrice").value;
+			if (str == "") {
+                alert("Tên sản phẩm bị trống");
+                return;
+            }
+            var text = document.createTextNode(str);
+            td.appendChild(text);
+            tr.appendChild(td);
+
+            td = document.createElement('td');
+            var str = document.getElementById("PSize").value;
+            var text = document.createTextNode(str);
+            td.appendChild(text);
+            tr.appendChild(td);
+
+			td = document.createElement('td');
+           td.innerHTML = '<i class="icon-copy dw dw-edit2" style="padding: 10px;" ></i>'
+            tr.appendChild(td);
+
+			td = document.createElement('td');
+           td.innerHTML = '<i id="btn_delete" class="icon-copy dw dw-delete-3" style="padding: 10px;" onclick="delUser(this);"></i>'
+            tr.appendChild(td);
+
+
+            tr.addEventListener("mouseover", function(){
+                this.style.backgroundColor = "orange";
+            });
+            tr.addEventListener("mouseout", function(){
+                this.style.backgroundColor = "transparent";
+            });
+
+            
+        
+
+
+			 var vitrimodify = parseInt(document.getElementById("Location").value);
+			 if (document.getElementById("Location").value == "") {
+                alert("Vị trí sản phẩm bị trống");
+                return;
+            }
+                var s = table.children[vitrimodify];
+				table.replaceChild(tr, s);
+			document.getElementById("PName").value = '';
+			document.getElementById("PPrice").value = '';
+			document.getElementById("PSize").value = '';
+			document.getElementById("Location").value = '';
+            }
 			  </script>
 	</body>
 </html>
