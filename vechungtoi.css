@@ -3,9 +3,23 @@
     font-size: 22px;
     position: relative;
 }
-.xemthem {
+.main-row button {
     color: initial;
+    border-radius: 10px;
+    border: 2px solid;
+    background-color: transparent;
 }
+
+.main-row button a {
+    text-decoration: none;
+    text-align: center;
+    margin-top: 20px;
+}
+.main-row button  a:hover {
+    font-size: 22px;
+    color: #f78d2a ;
+}
+
 .center{
     margin-bottom: 0;
 }
