@@ -82,7 +82,7 @@
             <div class="contentdktv">
                <!-- Đăng ký thành viên-->
                 <div class="popupdktv">
-                    <div class="btn_close"> &times;</div>
+                    <div class="btn_close" id="btn_close"> &times;</div>
                     <!-- <div class="logo"><img src="Image/Logo/logo.png" alt="Logo"></div> -->
                     <div class="title">Đăng ký thành viên</div>
                     <form action="#" class="form">
@@ -91,6 +91,7 @@
                         <input class="element" type="email" name="email" placeholder="Email "> <br>
                         <input class="element" type="text" required name="sdt" placeholder="Số điện thoại *"> <br>
                         <input type="button" value="ĐĂNG KÝ" id="btn_submit">
+                        <a href="TrangChu.html" id="boqua"> Bỏ qua</a>
             
                     </form>
                  </div>
@@ -102,16 +103,16 @@
         <footer>
             <div class="row">
                 <div class="col">
-                    <a href=""><img class="logo" src="Image/Logo/logo.png" ></a></div>
+                    <a href="TrangChu.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
                 <div class="col">
-                    <a href="#"><h3>Về chúng tôi</h3> </a>
-                        <a href="#"><p>Khởi nguồn</p> </a>
-                        <a href="#"><p>Quy định chung</p> </a>
+                    <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
+                        <a href="KhoiNguon.html"><p>Khởi nguồn</p> </a>
+                        <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
                 </div>
                 <div class="col">
-                    <a href="#"><h3>Liên hệ</h3> </a>
-                        <a href="#"><p>Góp ý</p> </a>
-                        <a href="#"><p>Hợp tác</p> </a>
+                    <a href="LienHe.html"><h3>Liên hệ</h3> </a>
+                        <a href="Gopy.html"><p>Góp ý</p> </a>
+                        <a href="LienHe.html"><p>Hợp tác</p> </a>
                 </div>
                 <div class="col3">
                     <a href="#"><img class="icon" src="Image/social/facebook.png"></a>
@@ -149,10 +150,16 @@
 
     else{
         alert("Đăng ký thành viên thành công!");
-        location.replace("Trangchu.html");
+        window.location ="Trangchu.html";
     }
         
       }
+
+    var  btn_boqua = document.getElementById('btn_close');
+    btn_boqua.onclick =  function(){
+        window.location.href = "TrangChu.html";
+        console.log(this);
+    }
     </script>  
 </body>
 </html>

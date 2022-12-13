@@ -745,5 +745,11 @@ button, input, optgroup, select, textarea {
     background: #EAAA75;
     font-family: Fahwang; 
 }
+.popupdktv .form #boqua{
+    position: absolute;
+    bottom: 10px;
+    right: 40%;
+
+}
 
 
