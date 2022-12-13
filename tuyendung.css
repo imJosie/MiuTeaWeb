@@ -1,4 +1,4 @@
-.text {
+.text1 {
     color: #fff;
     position: absolute;
     top: 150px;
@@ -10,7 +10,9 @@
     position: absolute;
     top: 400px;
     left: 700px;
-    
+    font-size: large;
+    padding-top: 15px;
+    padding-bottom: 15px;
     }
 .content1 {
     color: black;
@@ -60,58 +62,75 @@ height: 350px;
     width: 100%;
     height: 350px;
 }
-@media (max-width: 400px){ 
+@media only screen and (max-width: 46.1875em){ 
+    /* .slogan {
+        height: 100px;
+    } */
+    .tieude{
+        font-size: 18px;
+    }
+
+    .text1 {
+        
+        top: 100px;
+        left: 80px;
+        font-size: 16px;
+        
+        }
 
    .main-row{
     flex-direction: column;
+    margin-top: 20px;
     
 }
-.row1{
-    flex-direction: column-reverse;
-    width: 100%;
-    height: 650px;
-}
-.info{
-    width: 100%;
+    .row1{
+        flex-direction: column-reverse;
+        width: 100%;
+        height: 500px;
+    }
+    .info{
+        width: 100%;
+        font-size: 16px;
 
-}
-.img{
-    height: 350px;
-}
-.hinh{
-    width: 100%;
-}
-.row2{
-    flex-direction: column;
-    width: 100%;
-    height: 650px;
-}
-.text{
-    top: 100px;
-        left: 250px;
-}
-.button {
-    top: 250px;
-    left: 200px;
-    
     }
-.image {
-        top: 450px;
-        left: 420px;
+    .img{
+        height: 200px;
     }
-.content1 {
-        top: 400px;
-        left: 70px;
-        right: 70px;
-        font-size: 14px;
+    .hinh{
+        width: 100%;
+        height: 200px;
+    }
+    .row2{
+        flex-direction: column;
+        width: 100%;
+        height: 400px;
+    }
+   
+    .button {
+        top: 200px;
+        left: 120px;
+        font-size: small;
+        padding-top: 5px;
+        padding-bottom: 5px;
         
         }
-.text {
-    font-size: 18px;
-}
+    .image {
+            top: 450px;
+            left: 420px;
+        }
+    .content1 {
+            top: 250px;
+            left: 20px;
+            right: 20px;
+            font-size: 10px;
+            
+            }
+    .text {
+        font-size: 18px;
+    }
 }
 
-@media (max-width: 800px){
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
     .main-row{
         flex-direction: column;
         
@@ -134,9 +153,9 @@ height: 350px;
     .row2{
         flex-direction: column;
         width: 100%;
-        height: 650px;
+        height: 500px;
     }
-    .text{
+    .text1{
         top: 100px;
         left: 250px;
     }
