@@ -19,6 +19,9 @@
     font-family: Fahwang;
     color: black;
     }
+#sidebar #danhmuc .listdanhmuc a:hover{
+    color: #EAAA75;
+}
 
 #center{
     max-width: 1170px;
@@ -28,6 +31,15 @@
 .container {
     min-height: 100%;
 }
+.product-item .product-top .product_thumb {
+    overflow: hidden;
+    display: inline-block;}
+.product-top .product_thumb img {
+        transition: 0.8s;
+      }
+.product-item  .product-top .product_thumb img:hover{
+    transform: scale(1.2, 1.2);
+  }
 
 #sidebar{
     flex-basis:20%;
@@ -109,6 +121,9 @@ ul.listdanhmuc li a{
     text-decoration: none;
     list-style: none;
 }
+#sidebar h4 a:hover{
+    color: red;
+}
 .product-info h4{
     font-size: 18px;
     color: black;
@@ -125,6 +140,10 @@ ul.listdanhmuc li a{
 .product-info a{
     text-decoration: none;
     list-style: none;
+}
+.product-info a:hover{
+    transform: scale(1.2, 1.2);
+    color: red;
 }
 
 

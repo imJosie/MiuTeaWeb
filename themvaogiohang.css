@@ -10,11 +10,15 @@
     font-family: Fahwang-Bold;
     src: url(font/Fahkwang-Bold.ttf);
 }
-div.body{
+div.product{
     font-family: Fahwang;
     width:400px;
   margin: auto;
   border: 1px solid #000000;
+ 
+}
+div.body{
+    padding: 10px;
 }
 img{
     width: 100%;
