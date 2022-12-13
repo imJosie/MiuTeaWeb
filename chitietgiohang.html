@@ -4,21 +4,11 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
-        <title>Liên hệ</title>
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        <title>Chi tiết giỏ hàng</title>
+        ,<link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="chitietgiohang.css">
-        <script>
-            function dat_hang(){
-                location.assign("chitietdathang.html");
-            }
-            
-
-        </script>
     </head>
-    <body class="content">
+    <body class="body">
         <div class="header" >
             <div style="display: flex; justify-content: right;margin-top: 10px;">
                 <div  class="search">
@@ -83,7 +73,7 @@
                             <i class="fa fa-caret-down"></i>
                           </button>
                       <div class="dropdown-content">
-                        <a href="LienHe.html">Góp ý</a>
+                        <a href="Gopy.html">Góp ý</a>
                         <a href="LienHe.html">Hợp tác</a>
                       </div>
                     </div> 
@@ -113,86 +103,27 @@
             </div>
             
         </div >
-     
-            <h1 style="text-align: center;font-family: url('font/Fahkwang-Bold.ttf');margin-top: 20px;">GIỎ HÀNG</h1>
+
+        <h1 style="text-align: center;font-family: url('font/Fahkwang-Bold.ttf');">GIỎ HÀNG</h1>
+        <div id="clear">làm mới</div>
         <br/>
         <br/>
-        <div class="tablesp">
-            <table class="table-center" >
-                <tr class="spaceUnder">
-                    <td>
-                        <div><img class="imgsp" src="Image/sourcesp/Món nổi bật/Ô long kem phô mai.png"></div>
-                    </td>
-                    <td >
-                        <p style="text-align: left; font-family: url('font/Fahkwang-Regular.ttf');">
-                            <b>Olong kem phô mai</b><br/><br/>
-                            40.000đ<br/>
-                            30% đường, 50% đá, trân châu đen<br/>
-                            Số lượng: 1
-                        </p>   
-                    </td>
-                    <td style="vertical-align: top;">
-                        <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75; padding: 5px;" onclick="xoa(this)">Xóa</button>
-                    </td>
-                </tr>
-                <tr class="spaceUnder">
-                    <td>
-                        <div><img class="imgsp" src="Image/sourcesp/Món nổi bật/Royal-Pearl-Milk-Coffee.png"></div>
-                    </td>
-                    <td >
-                        <p style="text-align: left; font-family: url('font/Fahkwang-Regular.ttf');">
-                            <b>Royal Pearl Milk Coffee</b><br/><br/>
-                            50.000đ<br/>
-                            70% đường, 50% đá, trân châu đen<br/>
-                            Số lượng: 1
-                        </p>   
-                    </td>
-                    <td style="vertical-align: top;">
-                        <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;padding: 5px;" onclick="xoa(this)">Xóa</button>
-                    </td>
-                </tr>
-                <tr class="spaceUnder">
-                    <td>
-                        <div><img class="imgsp" src="Image/sourcesp/Món nổi bật/tra-man-hat-sen.png"></div>
-                    </td>
-                    <td >
-                        <p style="text-align: left; font-family: url('font/Fahkwang-Regular.ttf');">
-                            <b>Trà mận hạt sen</b><br/><br/>
-                            40.000đ<br/>
-                            100% đường, 70% đá, trân châu đen<br/>
-                            Số lượng: 1
-                        </p>   
-                    </td>
-                    <td style="vertical-align: top;">
-                        <button class="btnXoa" name="xoasp" type="button" style="border: none; background-color: #EAAA75;padding: 5px;" onclick="xoa(this)" >Xóa</button>
-                    </td>
-                </tr>
-                
-            </table>
+        <table class="table-center" id="table-prod">
             
-        </div>
-        
-            
-       
-        <div class="dathang">
-            <button name="Dathang" type="button" style="padding: 8px 20px; width: 130px; font-size: 15px;border-radius: 12px; border: none; background-color: #EAAA75;" onclick="dat_hang()">ĐẶT HÀNG</button>
-        </div>
-
-    
-
-        
+        </table>
+        <div id="Confirm"><a href="chitietdathang.html">Đặt hàng</a></div>
         <footer>
             <div class="row"  >
                 <div class="col">
                     <a href="TrangChu.html"><img class="logo" src="Image/Logo/logo.png" ></a></div>
-                <div class="col1">
+                <div class="col">
                     <a href="VeChungToi.html"><h3>Về chúng tôi</h3> </a>
                         <a href="KhoiNguon.html"><p>Khởi nguồn</p> </a>
                         <a href="quanlycuahang.html"><p>Quy định chung</p> </a>
                 </div>
-                <div class="col2">
-                    <a href="LienHe.html"><h3>Liên hệ</h3> </a>
-                        <a href="LienHe.html"><p>Góp ý</p> </a>
+                <div class="col">
+                    <h3><a href="LienHe.html">Liên hệ </a></h3>
+                        <a href="Gopy.html"><p>Góp ý</p> </a>
                         <a href="LienHe.html"><p>Hợp tác</p> </a>
                 </div>
                 <div class="col3">
@@ -206,26 +137,8 @@
             </div>
             
         </footer>
-        <script>
-
-            //xóa sp khỏi giỏ hàng
-            var giohang_td = document.createElement("td");
-            var giohang_td_nut = document.createElement("input")
-            giohang_td_nut.type = "button";
-            giohang_td_nut.value ="Xóa";
-            giohang_td_nut.setAttribute("onclick", "xoa(this)");
-            giohang_td.appendChild(giohang_td_nut);
-            giohang_tr.appendChild(giohang_td);
-
-            var giohang = document.getElementById("giohang");
-            giohang.appendChild(giohang_tr);
-
-            function xoa(x) {
-                var tr = x.parentElement.parentElement;
-                tr.remove();
-            }
-        </script>
        
     </body>
 
+    <script src="./chitietgiohang.js"></script>
 </html>

@@ -127,24 +127,22 @@ ul.listdanhmuc li a{
 .product-info h4{
     font-size: 18px;
     color: black;
-    border: 1px solid #EAAA75 ;
+    border: 0.5px solid #EAAA75 ;
     background-color: #EAAA75;
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.product-info h4 a {
-    text-decoration: none;
-    list-style: none;
-}
+
 .product-info a{
     text-decoration: none;
     list-style: none;
 }
-.product-info a:hover{
+.product-info h4:hover{
     transform: scale(1.2, 1.2);
     color: red;
 }
+.product-info h4 {border-radius:30%}
 
 
 
