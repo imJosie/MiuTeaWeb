@@ -922,3 +922,41 @@ button, input, optgroup, select, textarea {
 }
 
 
+.popup .form #btn_login:hover{
+    transform:  scaleX(1.02);
+    background-color: #34281f;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+}
+.popup .form #btn_verify:hover{
+    transform:  scaleX(1.02);
+    background-color: #34281f;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+}
+ #btn_submit:hover{
+    transform:  scaleX(1.02);
+    background-color: #34281f;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    color: #ffffff;
+}
+#boqua:hover{
+    color: #EAAA75;
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.popup .opt_text:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
