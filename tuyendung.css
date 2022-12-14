@@ -14,13 +14,16 @@
     padding-top: 15px;
     padding-bottom: 15px;
     }
-.content1 {
+   
+  .slogan .content1 {
     color: black;
     position: absolute;
-    top: 750px;
+    top:30%;
     left: 70px;
     right: 70px;
     font-size: 28px;
+    text-align: center;
+
     
     }
 .image {
@@ -70,14 +73,17 @@ height: 350px;
         font-size: 18px;
     }
 
-    .text1 {
-        
-        top: 100px;
-        left: 80px;
-        font-size: 16px;
+    .slogan .content1 {
+        color: black;
+        position: absolute;
+        top:13.5%;
+        left: 10px;
+        right: 10px;
+        font-size: 12px;
+        text-align: center;
+    
         
         }
-
    .main-row{
     flex-direction: column;
     margin-top: 20px;
@@ -156,7 +162,7 @@ height: 350px;
         height: 500px;
     }
     .text1{
-        top: 100px;
+        top: 150px;
         left: 250px;
     }
     .button {
@@ -170,11 +176,15 @@ height: 350px;
             width: 60px;
             height: 60px;
         }
-    .content1 {
-            top: 420px;
-            left: 70px;
-            right: 70px;
-            font-size: 16px;
+        .slogan .content1 {
+            color: black;
+            position: absolute;
+            top:18.5%;
+            left: 10px;
+            right: 10px;
+            font-size: 17px;
+            text-align: center;
+        
             
             }
     .text {
