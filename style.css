@@ -297,7 +297,7 @@ footer {
 
 /* running banner */
 .center {
-    margin-bottom: 120px;
+   
     width: 100%;
     min-height: 100vh;
 }
@@ -728,4 +728,4 @@ button, input, optgroup, select, textarea {
 
 }
 
-}
+

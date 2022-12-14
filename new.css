@@ -806,24 +806,19 @@ button, input, optgroup, select, textarea {
 }
 .popup .title{
     text-align: center;
-    font-size: 22px;
+    font-size: 16px;
     color:#EAAA75 ;
-    margin: 20px 0px 20px;
+    margin: 10px 0px 10px;
     font-family: Fahwang-Bold;
     
 }
 
-.popup .subtitle{
-    text-align: center;
-    font-size: 15px;
-    color:#EAAA75 ;
-    margin: 10px 0px 20px;
-    font-family: Fahwang;
-}
 #btn_login{
-    margin: 20px 0px 20px;
+    margin: 0px 20px 20px;
     height: 35px; 
-    width: 250px; 
+    width: 200px; 
+    color: white;
+    font-size: 15px;
     border-radius: 5px; 
     border: 1px solid#000000;
     background: #EAAA75;
@@ -855,107 +850,6 @@ button, input, optgroup, select, textarea {
     background: #EAAA75;
     font-family: Fahwang;
 }
-#popup2{
-    transition: 0.5s;
-    overflow: hidden;
-   visibility: hidden;
-}
-.contentdktv{
-   width: 100%;
-   height: 800px;
-}
-.popupdktv{
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    height: 450px;
-    width: 300px;
-    background: #ffffff;
-    padding: 20px 30px;
-    border-radius: 30px;
-    border: 1px solid#000000;
-}
-.popupdktv .btn_close{
-    position:absolute;
-    top: 10px;
-    right: 10px;
-    width: 15px;
-    height: 15px;
-    text-align: center;
-    background: #EAAA75;
-    color: #ffffff;
-    line-height: 15px;
-    border-radius: 15px;
-    cursor: pointer;
-}
-.popupdktv .form .element{
-    height: 35px;
-     width: 250px; 
-     padding: 8px;
-      border-radius: 5px; 
-      border: 1px solid#000000; 
-      margin-top: 20px;
-      font-size: 14px;
-}
-.popupdktv .title{
-    text-align: center;
-    font-size: 22px;
-    color:#EAAA75 ;
-    margin: 20px 0px 20px;
-    font-family: Fahwang-Bold;
-}
-#btn_submit{
-    margin: 40px 45px 20px 45px;
-    height: 35px; 
-    width: 150px; 
-    border-radius: 5px; 
-    border: 1px solid#000000;
-    background: #EAAA75;
-    font-family: Fahwang; 
-}
-.popupdktv .form #boqua{
-    position: absolute;
-    bottom: 10px;
-    right: 40%;
-
-}
-
-
-.popup .form #btn_login:hover{
-    transform:  scaleX(1.02);
-    background-color: #34281f;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    color: #ffffff;
-}
-.popup .form #btn_verify:hover{
-    transform:  scaleX(1.02);
-    background-color: #34281f;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    color: #ffffff;
-}
- #btn_submit:hover{
-    transform:  scaleX(1.02);
-    background-color: #34281f;
-    overflow: hidden;
-    transition: all 0.3s ease-in-out;
-    color: #ffffff;
-}
-#boqua:hover{
-    color: #EAAA75;
-    transform: scale(1.1);
-    transition: all 0.3s ease-in-out;
-}
-.popup .opt_text:hover{
-    transform: scale(1.05);
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-}
-
-
-
 
 
 
