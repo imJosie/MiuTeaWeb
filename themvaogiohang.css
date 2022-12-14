@@ -34,8 +34,12 @@ img{
 #top{
     display: flex;
 }
-#btn_addtocart{
-    border: 1px solid#000000;
-    background: #EAAA75;
-    font-family: Fahwang; 
+#thongtin #btn-add{
+    border: 1px solid #EAAA75 ;
+    background-color: #FDEEDF;
+    display: inline-block;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 11;
+
 }
