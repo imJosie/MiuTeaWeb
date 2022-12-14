@@ -18,11 +18,46 @@
       #floating-phone { display: none; position: fixed; left: 10px; bottom: 10px; height: 50px; width: 50px; background: #46C11E url(https://callnowbutton.com/phone/callbutton01.png) center / 30px no-repeat; z-index: 99; color: #FFF; font-size: 35px; line-height: 55px; text-align: center; border-radius: 50%; -webkit-box-shadow: 0 2px 5px rgba(0,0,0,.5); -moz-box-shadow: 0 2px 5px rgba(0,0,0,.5); box-shadow: 0 2px 5px rgba(0,0,0,.5); }
       
       @media (max-width: 650px) { #floating-phone { display: block; } }
+      #btn_Reset{
+    background-color: rgb(237, 177, 98);
+    padding: 5px; 
+    border-radius: 15px; 
+    margin-top: 30px; 
+    margin-left: 10px; 
+    border: 1px solid rgb(237, 177, 98);
+  }
+  #btn_Submit{
+    padding: 5px; border-radius: 15px;
+    background-color: rgb(237, 177, 98); 
+    margin-top: 30px; margin-left: 20px; 
+    border: 1px solid antiquewhite; 
+    width: 70px;
+
+  }
+      #btn_Submit:hover{
+        transform:  scaleX(1.02);
+        background-color: #34281f;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        color: #ffffff;
+
+      }
+
+      #btn_Reset:hover{
+        transform:  scaleX(1.02);
+        background-color: #34281f;
+        overflow: hidden;
+        transition: all 0.3s ease-in-out;
+        color: #ffffff;
+      }
+      #myTable td tr{
+        font-family: url('font/Fahkwang-Bold.ttf');
+      }
       
   </style>
 </head>
   
-    <body class="content">
+    <body class="content" style="background-image:url('Image/banner/background.png');">
 
       <div class="header" >
         <div style="display: flex; justify-content: right;margin-top: 10px;">
@@ -123,16 +158,49 @@
         <img class="hinh" src="Image/VeChungToi/lienhe.png" 
                     title="HỢP TÁC VỚI CHÚNG TÔI" />
                     <h1 class="text">GÓP Ý VỚI CHÚNG TÔI</h1>
-        <h1 class="lienhe" style="text-align: center;font-family: url('font/Fahkwang-Bold.ttf');">GÓP Ý</h1>
-        <div>
-          <p style="text-align: left;" class="info">
+        <h1 class="lienhe" style="text-align: center;font-family: url('font/Fahkwang-Bold.ttf'); padding: 20px;">GÓP Ý</h1>
+        <div id="gopy" style="height: 1000px;">
+          <!-- <p style="text-align: left;" class="info">
             Tên chính thức: CÔNG TY CỔ PHẦN ABC <br/>
             Trụ sở chính: 669 QL1A, khu phố 3, Thủ Đức, TP Hồ Chí Minh <br/>
             Mã số thuế/GPKD: 12345678 <br/>
             Người đại diện theo pháp luật: Ông ABC <br/>
             Điện thoại: 0312345678 <br/>
             Email: abcmilktea@gmail.com
-        </p>
+        </p> -->
+        <center>
+          <form action="#" id="myForm">
+            <table id="myTable" style="display: block;box-shadow: 5px 5px 5px #AAA; height: 400px;width: 350px; border:2px solid #0000; border-radius: 10px; background-color: antiquewhite;">
+              <tr>
+                <td style="padding: 5px;">Họ tên(*):</td>
+                <td style="padding: 5px; padding-top: 20px;"><input type="text" id="Name" placeholder="Họ và tên"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Email:</td>
+                <td style="padding: 5px;"><input type="email" id="Email" placeholder="Email"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Điện thoại(*):</td>
+                <td style="padding: 5px;"><input type="text" id="PhoneNumber" placeholder="Số điện thoại"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Địa chỉ:</td>
+                <td style="padding: 5px;"><input type="text" id="Address" placeholder="Địa chỉ"></td>
+              </tr>
+              <tr>
+                <td style="padding: 5px;">Nội dung góp ý(*):</td>
+                <td style="padding: 5px;"><input style="height: 100px;" type="text" id="Content"></td>
+              </tr>
+              <tr> <td colspan="2" style="text-align: center;"><input type="button" value="Gửi" id="btn_Submit">
+                <input type="button" value="Làm mới" id="btn_Reset"></td>
+              </tr>
+              
+            </table>
+  
+  
+        </form>
+        </center>
+        
         </div>
         
       </div>
@@ -182,7 +250,54 @@
           
       </footer>
         
-        
+        <script>
+          var Name = document.getElementById('Name');
+          var PhoneNumber = document.getElementById('PhoneNumber');
+          var Email = document.getElementById('Email');
+          var Address = document.getElementById('Address');
+          var Content = document.getElementById('Content');
+          var Submit = document.getElementById('btn_Submit');
+          var Reset = document.getElementById('btn_Reset');
+         
+          Reset.onclick = function(){
+       
+          Name.value ="";
+          PhoneNumber.value ="";
+          Email.value='';
+          Address.value='';
+          Content.value ="";
+
+        } 
+        Submit.onclick = function(){
+          if(!Name.value){
+            alert("Hãy nhập tên của bạn!")
+            Name.value ="";
+            Name.focus();
+          }
+          else if(!PhoneNumber.value){
+            alert("Hãy nhập số điện thoại của bạn!")
+            PhoneNumber.value ="";
+            PhoneNumber.focus();
+          }
+          else if(!Content.value){
+            alert("Hãy nhập nội dung góp ý của bạn!")
+            Content.value ="";
+            Content.focus();
+          }
+       
+       else{
+        alert("Góp ý của bạn đã được MiuTea ghi nhận. Chúng tôi sẽ phản hồi lại sớm nhất có thể. Cảm ơn bạn!")
+        Name.value ="";
+       PhoneNumber.value ="";
+       Email.value='';
+       Address.value='';
+       Content.value ="";
+        }
+     } 
+
+
+
+        </script>
         
     </body>
 </html>

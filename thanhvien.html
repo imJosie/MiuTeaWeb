@@ -7,9 +7,37 @@
     <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
     <title>Thành viên</title>
     <link rel="stylesheet" href="thanhvien.css">
+    <style>
+        /* search bar */
+#search-box{
+    background: #fff;
+    border-radius: 30px;
+}
+#search-box #search-text{
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 12px;
+    width: 150px;
+    padding: 0 5px;
+    transition: 0.5s ease-in-out;
+}
+#search-box:hover #search-text, #search-box #search-text:valid{
+    width: 150px;
+    padding: 0 10px;
+}
+#search-box #search-button {
+    border: none;
+    background-color: #fff;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 15px;
+}
+    </style>
    
 </head>
-<body>
+<body style="background-image:url('Image/banner/background.png');">
     <div class="container">
         <!-- Header -->
         <div class="header" >
@@ -17,7 +45,7 @@
                 <div  class="search">
                     <form action="" id="search-box">
                         <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
-                        <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
+                        <button id="search-button" onclick="searchProduct()"><i><img src="Image/social/searchic.png" width="15px"></i></button>
                         <script>
                             function searchProduct(){
                                 window.open("TimKiem.html", "_seft");
@@ -106,7 +134,7 @@
             </div>
             
         </div >
-        <!-- Content -->
+       <!-- content --> 
             <div class="content">
                <!-- Thành viên -->
                <center class="CtTitle">
@@ -211,7 +239,7 @@
     </div>
     <script language="JavaScript">
     
-        var Submit = document.getElementById("btn_submit");
+        var Submit = document.getElementById("button");
       Submit.onclick = function(){
 
         window.location ="Dangkythanhvien.html";
