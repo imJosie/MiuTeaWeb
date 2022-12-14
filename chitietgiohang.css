@@ -6,12 +6,13 @@
     font-family: Fahwang;
     color: black;
     }
-.table-center {width: 100%; 
-    margin: 0 auto; }
+.table-center {width: 70%; 
+    margin: 10px auto; }
 
 .content{
     margin-bottom: 0;
 }
+
  
 .imgsp{
     height: 150px;
@@ -23,7 +24,7 @@
     background-color: #FDEEDF;
     display: inline-block;
    
-    margin-left: 80%;
+    margin-left: 70%;
 }
 .Confirm{
     border: 1px solid #EAAA75 ;
@@ -70,10 +71,7 @@ tr.spaceUnder>td {
     .Confirm{
         margin-right: 50%;
     }
-    .center{
-        width: 100%;
-    }
-    
+    .center{width: 100%;}
     
 }
 
@@ -89,5 +87,6 @@ tr.spaceUnder>td {
         width: 70%;
         margin: 0 auto;
     }
+    .center{width: 100%;}
     
 }

@@ -9,7 +9,7 @@ const productTemplate=(imgSrc,sugarPercent,icePercent,price,nameProduct,number,t
             <p style="text-align: left; font-family: url('font/Fahkwang-Regular.ttf');">
                 <b>${nameProduct}</b><br/><br/>
                 ${price} đồng<br/>
-                ${sugarPercent}% đường, ${icePercent}% đá, ${topping}<br/>
+                ${sugarPercent} đường, ${icePercent} đá, ${topping}<br/>
                 Số lượng: ${number}
             </p>   
         </td>
