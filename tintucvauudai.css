@@ -839,11 +839,18 @@ button, input, optgroup, select, textarea {
     height: 350x;
     margin: 15px;
     float: left;
+    overflow: hidden;
 }
 .imgttud{
     height: 180px;
     width: 330px;
+    transition: all 0.3s ease-in-out;
 
+
+}
+.box-cha .box-con:hover .imgttud{
+    transform: scale(1.05);
+    opacity: 0.8;
 }
 .date{
     height: 21px;
