@@ -1,21 +1,41 @@
 
-
-.table-center { width: 50%; 
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Fahwang;
+    color: black;
+    }
+.table-center {width: 100%; 
     margin: 0 auto; }
 
 .content{
     margin-bottom: 0;
-}
-.dathang {
-   
-    margin-left: 1000px;
-    margin-bottom: 20px;
 }
  
 .imgsp{
     height: 150px;
     width: 135px;
 
+}
+#clear{
+    border: 1px solid #EAAA75 ;
+    background-color: #FDEEDF;
+    display: inline-block;
+   
+    margin-left: 80%;
+}
+.Confirm{
+    border: 1px solid #EAAA75 ;
+        background-color: #FDEEDF;
+        display: inline-block;
+        width: 100px;
+       height: 30px;
+        margin-left: 70%; 
+        text-align: center;
+}
+.Confirm a{
+    text-decoration: none;
 }
 btnXoa {
     width: 50px;
@@ -43,6 +63,17 @@ tr.spaceUnder>td {
         margin-left: 200px;
         margin-bottom: 20px;
     }
+    tbody{
+        width: 100%;
+    }
+   
+    .Confirm{
+        margin-right: 50%;
+    }
+    .center{
+        width: 100%;
+    }
+    
     
 }
 
@@ -53,11 +84,6 @@ tr.spaceUnder>td {
         width: 100%;
         margin: 10px;
        
-    }
-    .dathang {
-   
-        margin-left: 500px;
-        margin-bottom: 20px;
     }
     .tablesp {
         width: 70%;

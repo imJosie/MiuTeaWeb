@@ -116,6 +116,13 @@ ul.listdanhmuc li a{
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
+    border-radius:5px
+
+}
+#sidebar h4{
+    width: 200px;
+    height: 35px;
+    text-align: center;
 }
 #sidebar h4 a {
     text-decoration: none;
@@ -132,6 +139,12 @@ ul.listdanhmuc li a{
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+.product-info .product-pri{
+    color: #EAAA75;
 }
 
 .product-info a{
@@ -142,20 +155,59 @@ ul.listdanhmuc li a{
     transform: scale(1.2, 1.2);
     color: red;
 }
-.product-info h4 {border-radius:30%}
-
-
-
-/* *{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: Fahwang;
-    color: black;
+.product-info h4 {border-radius:5px}
+/* Moblie: width<740px */
+@media only screen and (max-width: 46.1875em) {
+    ul.products li{
+        width: 100%;
+        flex-basis: 50%
     }
-body {
-    
-    position: relative;
-    min-height: 100vh;
-    box-sizing: border-box;
-} */
+    #sidebar{
+        width: 30%;
+        margin-left: 10px;
+        }
+    #menu1{
+            width:  70%;
+        }
+    .product-info h4 {
+        width: 50%;
+        margin: bottom 10px;
+        position: relative;
+        font-size: 14px;
+        height: 90%;
+    }
+    .product-info a{
+        width: 100%;
+        font-size: 14px;
+    }
+    #sidebar h4{
+        width: 100%;
+        font-size: 14px;
+    }
+
+}
+@media only screen and (min-width:46.25em) and (max-width:63.9375em ){
+    ul.products li{
+        width: 100%;
+        flex-basis:33%
+    }
+    #sidebar{
+        width: 30%;
+        margin-left: 10px;
+        }
+    #menu1{
+            width:  70%;
+        }
+    .product-info h4 {
+        width: 60%;
+        margin: bottom 10px;
+        position: relative;
+    }
+    .product-info a{
+        width: 80%;
+    }
+    #sidebar h4{
+        width: 100%;
+        font-size: 16px;
+    }
+}
