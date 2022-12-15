@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="Image/Logo/favicon.png"  type="image/x-icon">
     <title>Thành viên</title>
     <link rel="stylesheet" href="thanhvien.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* search bar */
 #search-box{
@@ -45,7 +46,7 @@
                 <div  class="search">
                     <form action="" id="search-box">
                         <input id="search-text" type="text" placeholder="Tìm kiếm sản phẩm" required>
-                        <button id="search-button" onclick="searchProduct()"><i><img src="Image/social/searchic.png" width="15px"></i></button>
+                        <button id="search-button" onclick="searchProduct()"><i class="fa-solid fa-magnifying-glass" ></i></button>
                         <script>
                             function searchProduct(){
                                 window.open("TimKiem.html", "_seft");
@@ -91,18 +92,28 @@
                     <a href="Cuahang.html">Cửa hàng</a>
                     <a href="Menuspbanchay.html">Thực đơn</a>
                     <div class="dropdown">
-                        <button class="dropbtn">Tin tức & Ưu đãi
+                        <button onclick="openTinTucvaUuDai()" class="dropbtn">Tin tức & Ưu đãi
                             <i class="fa fa-caret-down"></i>
                           </button>
+                          <script>
+                            function openTinTucvaUuDai(){
+                                window.open("tintucvauudai.html","_self");
+                            }
+                          </script>
                       <div class="dropdown-content">
                         <a href="tintuc.html">Tin tức & Sự kiện</a>
                         <a href="uudai.html">Khuyến mãi</a>
                       </div>
                     </div> 
                     <div class="dropdown">
-                        <button class="dropbtn">Liên hệ
+                        <button onclick="openLienhe()" class="dropbtn">Liên hệ
                             <i class="fa fa-caret-down"></i>
                           </button>
+                          <script>
+                            function openLienhe(){
+                                window.open("LienHe.html","_self");
+                            }
+                          </script>
                       <div class="dropdown-content">
                         <a href="Gopy.html">Góp ý</a>
                         <a href="LienHe.html">Hợp tác</a>
